@@ -123,5 +123,20 @@
   "nome": "Larco",
   "arquivo": "larco.png",
   "tipo": "dist"
+ },
+ {
+  "nome": "Petribu",
+  "arquivo": "petribu.png",
+  "tipo": "usina"
+ },
+ {
+  "nome": "Vibra Energia",
+  "arquivo": "vibra-energia.png",
+  "tipo": "dist"
+ },
+ {
+  "nome": "Lubrotec",
+  "arquivo": "lubrotec.png",
+  "tipo": "parceiro"
  }
 ]
