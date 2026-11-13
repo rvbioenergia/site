@@ -158,5 +158,10 @@
   "nome": "Miriri",
   "arquivo": "miriri.png",
   "tipo": "usina"
+ },
+ {
+  "nome": "Cooperativa Pindorama",
+  "arquivo": "cooperativa-pindorama.png",
+  "tipo": "usina"
  }
 ]
