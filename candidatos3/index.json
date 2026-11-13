@@ -1,0 +1,544 @@
+{
+ "usina-pindorama": {
+  "grupo": "usinas",
+  "nome": "Usina Pindorama",
+  "dominios": [
+   "pindorama.com.br",
+   "usinapindorama.com.br",
+   "pindoramaagro.com.br"
+  ],
+  "verificados": [
+   [
+    "pindorama.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "usinapindorama.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "pindoramaagro.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Por_do_sol_na_Pedra_do_Sal%2C_Parnaiba.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Parnaíba",
+    "dominio": "wikipedia"
+   },
+   {
+    "arquivo": "01.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/SP-321.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:SP-321",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "pindorama.com.br": "ERRO HTTPSConnectionPool(host='pindorama.com.br', port=443): Read timed out. (read ti",
+   "usinapindorama.com.br": "ERRO HTTPSConnectionPool(host='usinapindorama.com.br', port=443): Max retries exceede",
+   "pindoramaagro.com.br": "ERRO HTTPSConnectionPool(host='pindoramaagro.com.br', port=443): Max retries exceeded"
+  }
+ },
+ "petribu": {
+  "grupo": "usinas",
+  "nome": "Petribu",
+  "dominios": [
+   "petribu.com.br",
+   "usinapetribu.com.br"
+  ],
+  "verificados": [
+   [
+    "petribu.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "usinapetribu.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png/v1/fill/w_111,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "petribu.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b~mv2.png/v1/fill/w_55,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_8ca938b151ea41558cb32aeb9725fa9b~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "petribu.com.br"
+   },
+   {
+    "arquivo": "02.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png/v1/fill/w_172,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "petribu.com.br"
+   },
+   {
+    "arquivo": "03.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "petribu.com.br"
+   },
+   {
+    "arquivo": "04.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "petribu.com.br"
+   },
+   {
+    "arquivo": "05.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "petribu.com.br"
+   },
+   {
+    "arquivo": "06.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76%7Emv2.png/v1/fit/w_2500,h_1330,al_c/af41a7_01914de30b5e48ddb529aa7bf16acb76%7Emv2.png",
+    "tipo": "og",
+    "dominio": "petribu.com.br"
+   }
+  ],
+  "titulos": {
+   "petribu.com.br": "Usina Petribu",
+   "usinapetribu.com.br": "ERRO HTTPSConnectionPool(host='usinapetribu.com.br', port=443): Max retries exceeded "
+  }
+ },
+ "leo-utinga": {
+  "grupo": "usinas",
+  "nome": "Leão Utinga",
+  "dominios": [
+   "usinaleao.com.br",
+   "leaoutinga.com.br",
+   "utingaleao.com.br",
+   "leao.com.br"
+  ],
+  "verificados": [
+   [
+    "usinaleao.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "leaoutinga.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "utingaleao.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "leao.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.svg",
+    "url": "https://leao.com.br/css/images/leao-logo-mobile.svg",
+    "tipo": "img-logo",
+    "dominio": "leao.com.br"
+   },
+   {
+    "arquivo": "01.svg",
+    "url": "https://leao.com.br/css/images/leao_logo.svg",
+    "tipo": "img-logo",
+    "dominio": "leao.com.br"
+   },
+   {
+    "arquivo": "02.svg",
+    "url": "https://leao.com.br/css/images/fe_logo.svg",
+    "tipo": "img-logo",
+    "dominio": "leao.com.br"
+   },
+   {
+    "arquivo": "03.ico",
+    "url": "https://leao.com.br/css/images/favicon.ico?v=3",
+    "tipo": "icon",
+    "dominio": "leao.com.br"
+   },
+   {
+    "arquivo": "04.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Brazil_Alagoas_location_map.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Aeródromo Manduca Leão",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "usinaleao.com.br": "ERRO HTTPSConnectionPool(host='usinaleao.com.br', port=443): Max retries exceeded wit",
+   "leaoutinga.com.br": "ERRO HTTPSConnectionPool(host='leaoutinga.com.br', port=443): Max retries exceeded wi",
+   "utingaleao.com.br": "ERRO HTTPSConnectionPool(host='utingaleao.com.br', port=443): Max retries exceeded wi",
+   "leao.com.br": "Início  | Bombas Leão | Franklin Electric"
+  }
+ },
+ "usina-trapiche": {
+  "grupo": "usinas",
+  "nome": "Usina Trapiche",
+  "dominios": [
+   "usinatrapiche.com.br",
+   "trapiche.com.br"
+  ],
+  "verificados": [
+   [
+    "usinatrapiche.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "trapiche.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [],
+  "titulos": {
+   "usinatrapiche.com.br": "ERRO HTTPSConnectionPool(host='usinatrapiche.com.br', port=443): Max retries exceeded",
+   "trapiche.com.br": "ERRO HTTPSConnectionPool(host='trapiche.com.br', port=443): Max retries exceeded with"
+  }
+ },
+ "tereos-brasil": {
+  "grupo": "usinas",
+  "nome": "Tereos Brasil",
+  "dominios": [
+   "tereos.com",
+   "tereos.com.br",
+   "tereos.com/pt-br"
+  ],
+  "verificados": [
+   [
+    "tereos.com",
+    "forçado",
+    0
+   ],
+   [
+    "tereos.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "tereos.com/pt-br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.svg",
+    "url": "https://www.tereos.com/app/uploads/2024/06/logo-tereos-signature-rvb-1.svg",
+    "tipo": "img-logo",
+    "dominio": "tereos.com"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://www.tereos.com/app/themes/tereos/dist/img/favicon.png",
+    "tipo": "icon",
+    "dominio": "tereos.com"
+   }
+  ],
+  "titulos": {
+   "tereos.com": "Groupe coopératif sucrier français - Tereos",
+   "tereos.com.br": "ERRO HTTPSConnectionPool(host='tereos.com.br', port=443): Max retries exceeded with u",
+   "tereos.com/pt-br": "ERRO 404 Client Error: Not Found for url: https://tereos.com/pt-br"
+  }
+ },
+ "cargill-brasil": {
+  "grupo": "usinas",
+  "nome": "Cargill Brasil",
+  "dominios": [
+   "cargill.com.br",
+   "cargill.com"
+  ],
+  "verificados": [
+   [
+    "cargill.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "cargill.com",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [],
+  "titulos": {
+   "cargill.com.br": "ERRO 403 Client Error: Forbidden for url: https://cargill.com.br/",
+   "cargill.com": "ERRO 403 Client Error: Forbidden for url: https://cargill.com/"
+  }
+ },
+ "integrao": {
+  "grupo": "usinas",
+  "nome": "Integração",
+  "dominios": [
+   "grupointegracao.com.br"
+  ],
+  "verificados": [
+   [
+    "grupointegracao.com.br",
+    "Grupo IntegraÃ§Ã£o | EstratÃ©gia e Tecnologia",
+    13685
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://static.wixstatic.com/media/5cb4c5_d5f030dbce91490ebe1f0e3780c1af3c~mv2.png/v1/fill/w_125,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%20GI%20sem%20Fundo.png",
+    "tipo": "img-logo",
+    "dominio": "grupointegracao.com.br"
+   }
+  ],
+  "titulos": {
+   "grupointegracao.com.br": "Grupo IntegraÃ§Ã£o | EstratÃ©gia e Tecnologia"
+  }
+ },
+ "petrotorque": {
+  "grupo": "distribuidoras",
+  "nome": "Petrotorque",
+  "dominios": [
+   "petrotorque.com.br",
+   "www.petrotorque.com.br"
+  ],
+  "verificados": [
+   [
+    "petrotorque.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.petrotorque.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://petrotorque.com.br/img/logo.png",
+    "tipo": "img-logo",
+    "dominio": "petrotorque.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://www.petrotorque.com.br/img/logo.png",
+    "tipo": "img-logo",
+    "dominio": "www.petrotorque.com.br"
+   }
+  ],
+  "titulos": {
+   "petrotorque.com.br": "Petro Torque",
+   "www.petrotorque.com.br": "Petro Torque"
+  }
+ },
+ "vibra-energia": {
+  "grupo": "distribuidoras",
+  "nome": "Vibra Energia",
+  "dominios": [
+   "vibraenergia.com.br"
+  ],
+  "verificados": [
+   [
+    "vibraenergia.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2021-08/logo.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2025-03/icone-lubrax-cor_nova%20marca.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "02.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2025-03/icone-lubrax-mais-cor_novo_logo.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "03.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2025-10/Nova%20marca%20BR%20Mania%202025.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "04.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2025-12/MARCA_VIBRA_SMART-CENTER_vertical_colorida.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "05.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2026-07/VIBRA-AGRITOP-DIESEL_NOVO_LOGO_VERDE_ESCURO_Vertical.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "06.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2023-05/logo_footer_new.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "07.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2025-01/logo_vibra_form_float2.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "08.png",
+    "url": "https://vibraenergia.com.br/sites/default/files/2025-01/logo_vibra_form_float2-mob.png",
+    "tipo": "img-logo",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "09.ico",
+    "url": "https://vibraenergia.com.br/sites/default/files/favicon.ico",
+    "tipo": "icon",
+    "dominio": "vibraenergia.com.br"
+   },
+   {
+    "arquivo": "10.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Logo_Vibra_Energia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "tipo": "commons:File:Logo Vibra Energia.png",
+    "dominio": "commons"
+   },
+   {
+    "arquivo": "11.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Logo_Vibra_Energia_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "tipo": "commons:File:Logo Vibra Energia 2.png",
+    "dominio": "commons"
+   }
+  ],
+  "titulos": {
+   "vibraenergia.com.br": "Vibra: Se tem Energia, Brasil, Futuro, vibra!"
+  }
+ },
+ "lubrotec": {
+  "grupo": "distribuidoras",
+  "nome": "Lubrotec",
+  "dominios": [
+   "lubrotec.com.br",
+   "www.lubrotec.com.br"
+  ],
+  "verificados": [
+   [
+    "lubrotec.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.lubrotec.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.webp",
+    "url": "https://lubrotec.com.br/assets/images/home/card-catalogo-produtos.webp",
+    "tipo": "img-logo",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://lubrotec.com.br/assets/images/clientes/anglogold-ashanti.png",
+    "tipo": "img-logo",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "02.ico",
+    "url": "https://lubrotec.com.br/assets/images/icons/favicon.ico",
+    "tipo": "icon",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "03.png",
+    "url": "https://lubrotec.com.br/assets/images/icons/favicon-32x32.png",
+    "tipo": "icon",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "04.png",
+    "url": "https://lubrotec.com.br/assets/images/icons/favicon-16x16.png",
+    "tipo": "icon",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "05.png",
+    "url": "https://lubrotec.com.br/assets/images/icons/apple-touch-icon.png",
+    "tipo": "icon",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "06.png",
+    "url": "https://lubrotec.com.br/assets/images/lubrotec-brand.png",
+    "tipo": "regex-logo",
+    "dominio": "lubrotec.com.br"
+   },
+   {
+    "arquivo": "07.webp",
+    "url": "https://lubrotec.com.br/assets/images/home/card-catalogo-produtos.webp",
+    "tipo": "img-logo",
+    "dominio": "www.lubrotec.com.br"
+   },
+   {
+    "arquivo": "08.png",
+    "url": "https://lubrotec.com.br/assets/images/clientes/anglogold-ashanti.png",
+    "tipo": "img-logo",
+    "dominio": "www.lubrotec.com.br"
+   },
+   {
+    "arquivo": "09.ico",
+    "url": "https://lubrotec.com.br/assets/images/icons/favicon.ico",
+    "tipo": "icon",
+    "dominio": "www.lubrotec.com.br"
+   },
+   {
+    "arquivo": "10.png",
+    "url": "https://lubrotec.com.br/assets/images/icons/favicon-32x32.png",
+    "tipo": "icon",
+    "dominio": "www.lubrotec.com.br"
+   },
+   {
+    "arquivo": "11.png",
+    "url": "https://lubrotec.com.br/assets/images/icons/favicon-16x16.png",
+    "tipo": "icon",
+    "dominio": "www.lubrotec.com.br"
+   },
+   {
+    "arquivo": "12.png",
+    "url": "https://lubrotec.com.br/assets/images/icons/apple-touch-icon.png",
+    "tipo": "icon",
+    "dominio": "www.lubrotec.com.br"
+   },
+   {
+    "arquivo": "13.png",
+    "url": "https://lubrotec.com.br/assets/images/lubrotec-brand.png",
+    "tipo": "regex-logo",
+    "dominio": "www.lubrotec.com.br"
+   }
+  ],
+  "titulos": {
+   "lubrotec.com.br": "Home - Lubrotec Lubrificantes TÃ©cnicos",
+   "www.lubrotec.com.br": "Home - Lubrotec Lubrificantes TÃ©cnicos"
+  }
+ }
+}
