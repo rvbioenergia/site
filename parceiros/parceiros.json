@@ -143,5 +143,20 @@
   "nome": "Cargill",
   "arquivo": "cargill.png",
   "tipo": "usina"
+ },
+ {
+  "nome": "Usina Serra Grande",
+  "arquivo": "usina-serra-grande.png",
+  "tipo": "usina"
+ },
+ {
+  "nome": "Usina Trapiche",
+  "arquivo": "usina-trapiche.png",
+  "tipo": "usina"
+ },
+ {
+  "nome": "Miriri",
+  "arquivo": "miriri.png",
+  "tipo": "usina"
  }
 ]
