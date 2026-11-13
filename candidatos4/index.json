@@ -1,0 +1,256 @@
+{
+ "pindorama": {
+  "grupo": "usinas",
+  "nome": "Pindorama",
+  "dominios": [],
+  "verificados": [],
+  "arquivos": [
+   {
+    "arquivo": "00.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Brasil",
+    "dominio": "wikipedia"
+   }
+  ]
+ },
+ "trapiche": {
+  "grupo": "usinas",
+  "nome": "Trapiche",
+  "dominios": [
+   "usinatrapiche.com.br"
+  ],
+  "verificados": [
+   [
+    "usinatrapiche.com.br",
+    "Usina Serra Grande |  Usina Trapiche S.A.",
+    25234
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_wordmark_Trapiche_%28winery%29_Argentina.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "tipo": "commons:File:Logo wordmark Trapiche (winery) Argentina.png",
+    "dominio": "commons"
+   },
+   {
+    "arquivo": "01.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Falta_imagem_aves.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Caburé-de-pernambuco",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "usinatrapiche.com.br": "ERRO HTTPSConnectionPool(host='usinatrapiche.com.br', port=443): Max retries exceeded"
+  }
+ },
+ "utinga": {
+  "grupo": "usinas",
+  "nome": "Utinga",
+  "dominios": [
+   "leaoenergia.com.br"
+  ],
+  "verificados": [
+   [
+    "leaoenergia.com.br",
+    "Leão Energia",
+    33918
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.svg",
+    "url": "https://www.leaoenergia.com.br/img/logo-white.svg",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://www.leaoenergia.com.br/img/logo.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "02.svg",
+    "url": "https://www.leaoenergia.com.br/img/logo.svg",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "03.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/sabesp.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "04.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/friella.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "05.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/plaenge.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "06.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/ayoshii.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "07.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/vectra_construtora.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "08.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/vanguard.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "09.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/galmo.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "10.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/tedesco.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "11.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/coopavel.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "12.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/lar.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "13.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/folhito.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "14.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/uel.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "15.png",
+    "url": "https://www.leaoenergia.com.br/img/marcas/brf.png",
+    "tipo": "img-logo",
+    "dominio": "leaoenergia.com.br"
+   },
+   {
+    "arquivo": "16.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Brazil_Alagoas_location_map.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Aeródromo Manduca Leão",
+    "dominio": "wikipedia"
+   },
+   {
+    "arquivo": "17.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Cabeceira_do_Rio_Utinga_01.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Rio Utinga",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "leaoenergia.com.br": "Leão Energia"
+  }
+ },
+ "cargill": {
+  "grupo": "usinas",
+  "nome": "Cargill",
+  "dominios": [
+   "cargill.com.br",
+   "cargill.com",
+   "cargill.com.br/pt"
+  ],
+  "verificados": [
+   [
+    "cargill.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "cargill.com",
+    "forçado",
+    0
+   ],
+   [
+    "cargill.com.br/pt",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Cargill_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "tipo": "commons:File:Cargill logo.svg",
+    "dominio": "commons"
+   },
+   {
+    "arquivo": "01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Santos_A%C3%A9rea_%28cropped%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Porto de Santos",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "cargill.com.br": "ERRO 403 Client Error: Forbidden for url: https://cargill.com.br/",
+   "cargill.com": "ERRO 403 Client Error: Forbidden for url: https://cargill.com/",
+   "cargill.com.br/pt": "ERRO 403 Client Error: Forbidden for url: https://cargill.com.br/pt"
+  }
+ },
+ "integrao-distribuidora": {
+  "grupo": "distribuidoras",
+  "nome": "Integração Distribuidora",
+  "dominios": [
+   "grupointegracao.com.br"
+  ],
+  "verificados": [
+   [
+    "grupointegracao.com.br",
+    "Grupo IntegraÃ§Ã£o | EstratÃ©gia e Tecnologia",
+    13685
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://static.wixstatic.com/media/5cb4c5_d5f030dbce91490ebe1f0e3780c1af3c~mv2.png/v1/fill/w_125,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%20GI%20sem%20Fundo.png",
+    "tipo": "img-logo",
+    "dominio": "grupointegracao.com.br"
+   },
+   {
+    "arquivo": "01.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Logotipo_da_Celesc.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Centrais Elétricas de Santa Catarina",
+    "dominio": "wikipedia"
+   },
+   {
+    "arquivo": "02.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Cummins_logo.svg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Cummins",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "grupointegracao.com.br": "Grupo IntegraÃ§Ã£o | EstratÃ©gia e Tecnologia"
+  }
+ }
+}
