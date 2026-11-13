@@ -1,0 +1,393 @@
+{
+ "usina-serra-grande": {
+  "grupo": "usinas",
+  "nome": "Usina Serra Grande",
+  "dominios": [
+   "usinaserragrande.com.br",
+   "www.usinaserragrande.com.br"
+  ],
+  "verificados": [
+   [
+    "usinaserragrande.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.usinaserragrande.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://usinaserragrande.com.br/img/logo-usina-serra-grande.png?v=1",
+    "tipo": "img-logo",
+    "dominio": "usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://usinaserragrande.com.br/img/logo-usina-trapiche.png",
+    "tipo": "img-logo",
+    "dominio": "usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "02.png",
+    "url": "https://usinaserragrande.com.br/img/apple-touch-icon.png?v=1",
+    "tipo": "icon",
+    "dominio": "usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "03.png",
+    "url": "https://usinaserragrande.com.br/img/favicon-32x32.png?v=1",
+    "tipo": "icon",
+    "dominio": "usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "04.png",
+    "url": "https://usinaserragrande.com.br/img/favicon-16x16.png?v=1",
+    "tipo": "icon",
+    "dominio": "usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "05.png",
+    "url": "https://usinaserragrande.com.br/img/logo-usina-serra-grande.png",
+    "tipo": "regex-logo",
+    "dominio": "usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "06.png",
+    "url": "https://www.usinaserragrande.com.br/img/logo-usina-serra-grande.png?v=1",
+    "tipo": "img-logo",
+    "dominio": "www.usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "07.png",
+    "url": "https://www.usinaserragrande.com.br/img/logo-usina-trapiche.png",
+    "tipo": "img-logo",
+    "dominio": "www.usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "08.png",
+    "url": "https://www.usinaserragrande.com.br/img/apple-touch-icon.png?v=1",
+    "tipo": "icon",
+    "dominio": "www.usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "09.png",
+    "url": "https://www.usinaserragrande.com.br/img/favicon-32x32.png?v=1",
+    "tipo": "icon",
+    "dominio": "www.usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "10.png",
+    "url": "https://www.usinaserragrande.com.br/img/favicon-16x16.png?v=1",
+    "tipo": "icon",
+    "dominio": "www.usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "11.png",
+    "url": "https://www.usinaserragrande.com.br/img/logo-usina-serra-grande.png",
+    "tipo": "regex-logo",
+    "dominio": "www.usinaserragrande.com.br"
+   },
+   {
+    "arquivo": "12.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Parede_Verde.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Usina Henry Borden",
+    "dominio": "wikipedia"
+   },
+   {
+    "arquivo": "13.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/09_09_2021_Visita_%C3%A0_Usina_Hidrel%C3%A9trica_Belo_Monte_%2851443381900%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Usina Hidrelétrica de Belo Monte",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "usinaserragrande.com.br": "Usina Serra Grande |  Usina Trapiche S.A.",
+   "www.usinaserragrande.com.br": "Usina Serra Grande |  Usina Trapiche S.A."
+  }
+ },
+ "usina-bom-jesus": {
+  "grupo": "usinas",
+  "nome": "Usina Bom Jesus",
+  "dominios": [
+   "usinabomjesus.com.br",
+   "www.usinabomjesus.com.br"
+  ],
+  "verificados": [
+   [
+    "usinabomjesus.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.usinabomjesus.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Pirapora_do_Bom_Jesus.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Pirapora do Bom Jesus",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "usinabomjesus.com.br": "ERRO HTTPSConnectionPool(host='usinabomjesus.com.br', port=443): Max retries exceeded",
+   "www.usinabomjesus.com.br": "ERRO HTTPSConnectionPool(host='www.usinabomjesus.com.br', port=443): Max retries exce"
+  }
+ },
+ "miriri": {
+  "grupo": "usinas",
+  "nome": "Miriri",
+  "dominios": [
+   "miriri.com.br",
+   "www.miriri.com.br"
+  ],
+  "verificados": [
+   [
+    "miriri.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.miriri.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://miriri.com.br/themes/portalmiriri/assets/images/logo_header.png",
+    "tipo": "img-logo",
+    "dominio": "miriri.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://miriri.com.br/themes/portalmiriri/assets/images/logo_footer.png",
+    "tipo": "img-logo",
+    "dominio": "miriri.com.br"
+   },
+   {
+    "arquivo": "02.png",
+    "url": "https://miriri.com.br/themes/portalmiriri/assets/images/favicon.png",
+    "tipo": "icon",
+    "dominio": "miriri.com.br"
+   },
+   {
+    "arquivo": "03.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Geophagus_brasiliensis_c01.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Rio Miriri",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "miriri.com.br": "",
+   "www.miriri.com.br": "ERRO HTTPSConnectionPool(host='www.miriri.com.br', port=443): Max retries exceeded wi"
+  }
+ },
+ "petribu-sa": {
+  "grupo": "usinas",
+  "nome": "Petribu SA",
+  "dominios": [
+   "petribusa.com.br",
+   "www.petribusa.com.br"
+  ],
+  "verificados": [
+   [
+    "petribusa.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.petribusa.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png/v1/fill/w_111,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "01.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b~mv2.png/v1/fill/w_55,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_8ca938b151ea41558cb32aeb9725fa9b~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "02.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png/v1/fill/w_172,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "03.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "04.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "05.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "06.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76%7Emv2.png/v1/fit/w_2500,h_1330,al_c/af41a7_01914de30b5e48ddb529aa7bf16acb76%7Emv2.png",
+    "tipo": "og",
+    "dominio": "petribusa.com.br"
+   },
+   {
+    "arquivo": "07.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png/v1/fill/w_111,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "www.petribusa.com.br"
+   },
+   {
+    "arquivo": "08.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b~mv2.png/v1/fill/w_55,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_8ca938b151ea41558cb32aeb9725fa9b~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "www.petribusa.com.br"
+   },
+   {
+    "arquivo": "09.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png/v1/fill/w_172,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/af41a7_01914de30b5e48ddb529aa7bf16acb76~mv2.png",
+    "tipo": "img-logo",
+    "dominio": "www.petribusa.com.br"
+   },
+   {
+    "arquivo": "10.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "www.petribusa.com.br"
+   },
+   {
+    "arquivo": "11.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "www.petribusa.com.br"
+   },
+   {
+    "arquivo": "12.png",
+    "url": "https://static.wixstatic.com/media/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/af41a7_8ca938b151ea41558cb32aeb9725fa9b%7Emv2.png",
+    "tipo": "icon",
+    "dominio": "www.petribusa.com.br"
+   },
+   {
+    "arquivo": "13.png",
+    "url": "https://static.wixstatic.com/media/af41a7_01914de30b5e48ddb529aa7bf16acb76%7Emv2.png/v1/fit/w_2500,h_1330,al_c/af41a7_01914de30b5e48ddb529aa7bf16acb76%7Emv2.png",
+    "tipo": "og",
+    "dominio": "www.petribusa.com.br"
+   }
+  ],
+  "titulos": {
+   "petribusa.com.br": "Usina Petribu",
+   "www.petribusa.com.br": "Usina Petribu"
+  }
+ },
+ "cooperativa-pindorama": {
+  "grupo": "usinas",
+  "nome": "Cooperativa Pindorama",
+  "dominios": [
+   "cooperativapindorama.com.br",
+   "www.cooperativapindorama.com.br"
+  ],
+  "verificados": [
+   [
+    "cooperativapindorama.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.cooperativapindorama.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [
+   {
+    "arquivo": "00.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kaufhaus_Panambi.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=original",
+    "tipo": "wiki:Panambi",
+    "dominio": "wikipedia"
+   }
+  ],
+  "titulos": {
+   "cooperativapindorama.com.br": "ERRO 403 Client Error: Forbidden for url: https://cooperativapindorama.com.br/",
+   "www.cooperativapindorama.com.br": "ERRO 403 Client Error: Forbidden for url: https://www.cooperativapindorama.com.br/"
+  }
+ },
+ "usina-taquari": {
+  "grupo": "usinas",
+  "nome": "Usina Taquari",
+  "dominios": [
+   "usinataquari.com.br",
+   "www.usinataquari.com.br"
+  ],
+  "verificados": [
+   [
+    "usinataquari.com.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.usinataquari.com.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [],
+  "titulos": {
+   "usinataquari.com.br": "ERRO HTTPSConnectionPool(host='usinataquari.com.br', port=443): Max retries exceeded ",
+   "www.usinataquari.com.br": "ERRO HTTPSConnectionPool(host='www.usinataquari.com.br', port=443): Max retries excee"
+  }
+ },
+ "usina-trapiche": {
+  "grupo": "usinas",
+  "nome": "Usina Trapiche",
+  "dominios": [
+   "usinatrapiche.ind.br",
+   "www.usinatrapiche.ind.br"
+  ],
+  "verificados": [
+   [
+    "usinatrapiche.ind.br",
+    "forçado",
+    0
+   ],
+   [
+    "www.usinatrapiche.ind.br",
+    "forçado",
+    0
+   ]
+  ],
+  "arquivos": [],
+  "titulos": {
+   "usinatrapiche.ind.br": "ERRO HTTPSConnectionPool(host='usinatrapiche.ind.br', port=443): Max retries exceeded",
+   "www.usinatrapiche.ind.br": "ERRO HTTPSConnectionPool(host='www.usinatrapiche.ind.br', port=443): Max retries exce"
+  }
+ },
+ "utinga-leo": {
+  "grupo": "usinas",
+  "nome": "Utinga Leão",
+  "dominios": [],
+  "verificados": [],
+  "arquivos": []
+ }
+}
