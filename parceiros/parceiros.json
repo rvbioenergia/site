@@ -138,5 +138,10 @@
   "nome": "Lubrotec",
   "arquivo": "lubrotec.png",
   "tipo": "parceiro"
+ },
+ {
+  "nome": "Cargill",
+  "arquivo": "cargill.png",
+  "tipo": "usina"
  }
 ]
