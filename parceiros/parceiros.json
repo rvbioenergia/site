@@ -67,8 +67,7 @@
  {
   "nome": "Petrotorque",
   "arquivo": "petrotorque.png",
-  "tipo": "dist",
-  "escala": 1.45
+  "tipo": "dist"
  },
  {
   "nome": "Montepetro",
