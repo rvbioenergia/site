@@ -1,0 +1,556 @@
+#!/usr/bin/env python3
+"""
+RV Bioenergia — Coletor automático de dados de mercado
+Roda todo dia útil às 08:00h (Brasília) via GitHub Actions
+Fontes: GitHub Datasets (Brent), RSS (notícias),
+        Notícias Agrícolas — espelho do CEPEA/ESALQ (etanol hidratado/anidro semanal SP,
+        pois cepea.org.br bloqueia scraping automatizado),
+        CombustívelBR — dados ANP por capital de UF (paridade etanol x gasolina)
+"""
+
+import json
+import sys
+import re
+import unicodedata
+import urllib.request
+import urllib.error
+import urllib.parse
+from datetime import datetime, timedelta
+
+OUTPUT_FILE = "dados-mercado.json"
+
+def fetch_url(url, timeout=15):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (compatible; RVBioenergia/1.0)',
+        'Accept': 'text/html,application/json,*/*',
+    }
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read().decode('utf-8', errors='ignore')
+    except Exception as e:
+        print(f"[ERRO] {url}: {e}")
+        return None
+
+def load_existing():
+    """Carrega dados existentes para usar como fallback"""
+    try:
+        with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def _serie_brent_yahoo(intervalo="5d"):
+    """Série diária do Brent (futuro ICE, BZ=F) via Yahoo Finance. Lista [(YYYY-MM-DD, fechamento)]."""
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/BZ=F?range={intervalo}&interval=1d"
+    content = fetch_url(url)
+    if not content:
+        return []
+    try:
+        res = json.loads(content)["chart"]["result"][0]
+        off = res.get("meta", {}).get("gmtoffset", 0) or 0
+        closes = res["indicators"]["quote"][0]["close"]
+        out = []
+        for t, v in zip(res["timestamp"], closes):
+            if v is None:
+                continue
+            out.append((datetime.utcfromtimestamp(t + off).strftime("%Y-%m-%d"), round(float(v), 2)))
+        return out
+    except Exception as e:
+        print(f"[BRENT] Yahoo inválido: {e}")
+        return []
+
+def _serie_brent_csv():
+    """Série diária do Brent via GitHub Datasets (reserva; pode atrasar vários dias)."""
+    content = fetch_url("https://raw.githubusercontent.com/datasets/oil-prices/main/data/brent-daily.csv")
+    if not content:
+        return []
+    out = []
+    for l in content.strip().split('\n'):
+        p = l.strip().split(',')
+        if len(p) >= 2 and re.match(r'\d{4}-\d{2}-\d{2}$', p[0]):
+            try:
+                out.append((p[0], round(float(p[1]), 2)))
+            except ValueError:
+                pass
+    return out
+
+def _data_br(iso):
+    try:
+        return datetime.strptime(iso, '%Y-%m-%d').strftime('%d/%m/%Y')
+    except Exception:
+        return iso
+
+def get_brent(existing):
+    """Brent: fonte principal Yahoo Finance (ICE, atualiza diariamente); reserva GitHub Datasets.
+    Nunca troca um dado mais novo por um mais antigo."""
+    print("[BRENT] Buscando dados...")
+    serie = _serie_brent_yahoo("5d")
+    fonte = "Yahoo Finance (ICE Brent)"
+    if len(serie) < 2:
+        serie = _serie_brent_csv()[-5:]
+        fonte = "GitHub Datasets"
+    atual = existing.get('brent') or {"valor": 0, "variacao": 0, "data": "—"}
+    if len(serie) < 2:
+        print("[BRENT] Falhou — mantendo último valor")
+        return atual
+    cur, prv = serie[-1][1], serie[-2][1]
+    resultado = {"valor": cur, "variacao": round((cur - prv) / prv * 100, 2),
+                 "data": _data_br(serie[-1][0]), "fonte": fonte}
+    d_novo = _parse_data_br(resultado["data"])
+    d_old = _parse_data_br(atual.get("data", ""))
+    if d_novo and d_old and d_old > d_novo:
+        print("[BRENT] Dado existente é mais recente — mantido")
+        return atual
+    print(f"[BRENT] USD {cur:.2f} ({resultado['variacao']:+.2f}%) — {resultado['data']} [{fonte}]")
+    return resultado
+
+def get_historico_brent(existing):
+    """Últimas 8 semanas do Brent (1 ponto por semana, terminando no dado mais recente)."""
+    print("[BRENT HIST] Atualizando histórico...")
+    serie = _serie_brent_yahoo("3mo")
+    if len(serie) < 20:
+        serie = _serie_brent_csv()
+    if len(serie) < 20:
+        return existing.get('historico_brent', [])
+    pontos = list(reversed(serie[::-1][::5][:8]))
+    result = []
+    for iso, v in pontos:
+        try:
+            data = datetime.strptime(iso, '%Y-%m-%d').strftime('%d/%m')
+        except Exception:
+            data = iso[5:]
+        result.append({"data": data, "valor": v})
+    print(f"[BRENT HIST] {len(result)} pontos")
+    return result
+
+CAPITAIS_UF = [
+    ("AC", "Acre", "rio-branco-ac"), ("AL", "Alagoas", "maceio-al"),
+    ("AP", "Amapá", "macapa-ap"), ("AM", "Amazonas", "manaus-am"),
+    ("BA", "Bahia", "salvador-ba"), ("CE", "Ceará", "fortaleza-ce"),
+    ("DF", "Distrito Federal", "brasilia-df"), ("ES", "Espírito Santo", "vitoria-es"),
+    ("GO", "Goiás", "goiania-go"), ("MA", "Maranhão", "sao-luis-ma"),
+    ("MT", "Mato Grosso", "cuiaba-mt"), ("MS", "Mato Grosso do Sul", "campo-grande-ms"),
+    ("MG", "Minas Gerais", "belo-horizonte-mg"), ("PA", "Pará", "belem-pa"),
+    ("PB", "Paraíba", "joao-pessoa-pb"), ("PR", "Paraná", "curitiba-pr"),
+    ("PE", "Pernambuco", "recife-pe"), ("PI", "Piauí", "teresina-pi"),
+    ("RJ", "Rio de Janeiro", "rio-de-janeiro-rj"), ("RN", "Rio Grande do Norte", "natal-rn"),
+    ("RS", "Rio Grande do Sul", "porto-alegre-rs"), ("RO", "Rondônia", "porto-velho-ro"),
+    ("RR", "Roraima", "boa-vista-rr"), ("SC", "Santa Catarina", "florianopolis-sc"),
+    ("SP", "São Paulo", "sao-paulo-sp"), ("SE", "Sergipe", "aracaju-se"),
+    ("TO", "Tocantins", "palmas-to"),
+]
+
+ANP_CAPITAL = {'AC':'Rio Branco','AL':'Maceió','AP':'Macapá','AM':'Manaus','BA':'Salvador','CE':'Fortaleza',
+    'DF':'Brasília','ES':'Vitória','GO':'Goiânia','MA':'São Luís','MT':'Cuiabá','MS':'Campo Grande',
+    'MG':'Belo Horizonte','PA':'Belém','PB':'João Pessoa','PR':'Curitiba','PE':'Recife','PI':'Teresina',
+    'RJ':'Rio de Janeiro','RN':'Natal','RS':'Porto Alegre','RO':'Porto Velho','RR':'Boa Vista',
+    'SC':'Florianópolis','SP':'São Paulo','SE':'Aracaju','TO':'Palmas'}
+
+def _capitais_sem_preco_anp(texto):
+    """Dado o texto da Síntese Semanal da ANP, devolve as UFs cuja capital aparece sem preço ('-')."""
+    sem = set()
+    norm = _normalizar(texto).splitlines()
+    for uf, cap in ANP_CAPITAL.items():
+        alvo = _normalizar(cap)
+        for i, linha in enumerate(norm):
+            l = linha.strip()
+            if l.startswith(alvo):
+                resto = l[len(alvo):].split()
+                if not resto:  # nome sozinho na linha: valor na linha seguinte
+                    prox = next((x.strip() for x in norm[i+1:i+4] if x.strip()), '')
+                    resto = prox.split()
+                if resto and resto[0] in ('-', '–', '—'):
+                    sem.add(uf)
+                break
+    return sem
+
+DIAG_PLN = {}
+DIAG_ANP = {}
+
+def get_capitais_sem_preco_anp():
+    """Baixa a edição mais recente da Síntese Semanal de Preços da ANP e identifica capitais sem preço
+    na semana (ex.: Macapá '-'), para não misturar valores antigos de terceiros com a semana atual.
+    Falha segura: se algo der errado, não exclui nada (comportamento anterior)."""
+    import subprocess, tempfile, os
+    try:
+        # Edição 41 = semana encerrada em 10/10/2026; uma por semana.
+        ed_max = 41 + (datetime.now().date() - datetime(2026, 10, 10).date()).days // 7
+        for ed in range(ed_max, ed_max - 3, -1):
+            url = f"https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/arq-sintese-semanal/2026/sintese-precos-{ed}.pdf"
+            try:
+                req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; RVBioenergia/1.0)'})
+                dados = urllib.request.urlopen(req, timeout=30).read()
+            except Exception as e:
+                DIAG_ANP[f'ed{ed}'] = f'download falhou: {str(e)[:80]}'
+                continue
+            if not dados.startswith(b'%PDF'):
+                DIAG_ANP[f'ed{ed}'] = 'resposta não é PDF'
+                continue
+            with tempfile.TemporaryDirectory() as tmp:
+                pdf = os.path.join(tmp, 's.pdf')
+                open(pdf, 'wb').write(dados)
+                try:
+                    txt = subprocess.run(['pdftotext', '-layout', pdf, '-'], capture_output=True, text=True, timeout=60).stdout
+                except FileNotFoundError:
+                    try:
+                        import pypdf
+                    except ImportError:
+                        subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'pypdf'], timeout=120)
+                        import pypdf
+                    txt = '\n'.join((p.extract_text() or '') for p in pypdf.PdfReader(pdf).pages)
+            sem = _capitais_sem_preco_anp(txt)
+            try:
+                per = re.search(r'(\d{2}/\d{2}/\d{4})\s*(?:a|à|-|–)\s*(\d{2}/\d{2}/\d{4})', txt)
+                DIAG_ANP['periodo'] = per.group(0) if per else 'não encontrado'
+                linhas_txt = [l.strip() for l in txt.splitlines()]
+                for cap in ('São Paulo','Belo Horizonte','Rio de Janeiro','Curitiba','Porto Alegre','Salvador','Goiânia','Brasília','Florianópolis','Recife'):
+                    DIAG_ANP['linhas_'+cap] = [l[:90] for l in linhas_txt if l.startswith(cap)][:4]
+            except Exception as e:
+                DIAG_ANP['erro_linhas'] = str(e)[:80]
+            DIAG_ANP[f'ed{ed}'] = f'ok, {len(txt)} chars; sem preço: {sorted(sem)}; trecho Macapá: ' + ' | '.join(l.strip()[:60] for l in txt.splitlines() if 'Macap' in l)[:200]
+            print(f"[ANP] Edição {ed}: capitais sem preço na semana: {sorted(sem) or 'nenhuma'}")
+            return sem
+    except Exception as e:
+        DIAG_ANP['erro'] = str(e)[:120]
+        print(f"[ANP] Verificação indisponível: {e}")
+    return set()
+
+def get_pln_diario(existing):
+    """Indicador diário do etanol hidratado CEPEA/ESALQ/B3 posto Paulínia (R$/m³ -> R$/L).
+    Tenta a página do CEPEA; falha segura: mantém o dado anterior e registra o motivo em DIAG_PLN."""
+    url = "https://www.cepea.org.br/br/indicador/etanol-diario-paulinia.aspx"
+    html = fetch_url(url, timeout=25)
+    if not html:
+        DIAG_PLN['status'] = 'cepea inacessível'
+        return existing.get('pln_diario')
+    txt = re.sub(r'<[^>]+>', ' ', html)
+    txt = re.sub(r'\s+', ' ', txt)
+    linhas = re.findall(r'(\d{2}/\d{2}/\d{4})\s+(\d\.\d{3},\d{2})\s+(-?\d+,\d+)\s*%', txt)
+    if len(linhas) < 2:
+        DIAG_PLN['status'] = 'tabela não encontrada'
+        DIAG_PLN['trecho'] = txt[:200]
+        return existing.get('pln_diario')
+    num = lambda v: float(v.replace('.', '').replace(',', '.'))
+    d0, v0, var0 = linhas[0]
+    v1 = num(linhas[1][1])
+    DIAG_PLN['status'] = 'ok'
+    return {
+        'data': d0,
+        'valor_m3': num(v0),
+        'valor_litro': round(num(v0) / 1000, 4),
+        'anterior_litro': round(v1 / 1000, 4),
+        'variacao_dia': num(var0),
+        'historico': [{'data': d, 'valor_litro': round(num(v) / 1000, 4)} for d, v, _ in linhas[:10]][::-1],
+        'fonte': 'CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)',
+    }
+
+def get_paridade_capitais(existing):
+    """Busca preço de etanol/gasolina e paridade nas 27 capitais das UFs.
+    Fonte: CombustívelBR (combustivelbr.com.br), que processa e publica os dados
+    oficiais da pesquisa semanal da ANP por município — usamos apenas as capitais,
+    não a base completa de +2.700 municípios."""
+    print("[PARIDADE CAPITAIS] Buscando dados por capital (ANP via CombustívelBR)...")
+
+    padrao_gas = re.compile(r'gasolina a R\$(\d+,\d+)/litro')
+    padrao_eth = re.compile(r'etanol est[áa] a R\$(\d+,\d+)/litro')
+    padrao_prop = re.compile(r'propor[çc][ãa]o é (\d+)%')
+
+    estados = []
+    falhas = 0
+    sem_preco = get_capitais_sem_preco_anp()
+    for uf, nome, slug in CAPITAIS_UF:
+        if uf in sem_preco:
+            print(f"[PARIDADE CAPITAIS] {nome}: sem preço na ANP nesta semana — excluída")
+            continue
+        url = f"https://combustivelbr.com.br/cidade/{slug}"
+        content = fetch_url(url, timeout=15)
+        if not content:
+            falhas += 1
+            continue
+        gas = padrao_gas.search(content)
+        eth = padrao_eth.search(content)
+        if not gas or not eth:
+            falhas += 1
+            continue
+        gasolina = round(float(gas.group(1).replace(',', '.')), 2)
+        etanol = round(float(eth.group(1).replace(',', '.')), 2)
+        estados.append({"uf": uf, "nome": nome, "etanol": etanol, "gasolina": gasolina})
+
+    if len(estados) < 20:
+        print(f"[PARIDADE CAPITAIS] Falhou em {falhas}/27 — mantendo dados anteriores")
+        return existing.get('nacional', {
+            "paridade": 70.0, "etanol_medio": 4.80, "gasolina_media": 6.83,
+            "municipios_vantajosos": 0, "municipios_pesquisados": 27
+        }), existing.get('estados', [])
+
+    etanol_medio = round(sum(e["etanol"] for e in estados) / len(estados), 2)
+    gasolina_media = round(sum(e["gasolina"] for e in estados) / len(estados), 2)
+    paridade = round(etanol_medio / gasolina_media * 100, 1)
+    vantajosos = sum(1 for e in estados if e["etanol"] / e["gasolina"] * 100 <= 70)
+
+    nacional = {
+        "paridade": paridade,
+        "etanol_medio": etanol_medio,
+        "gasolina_media": gasolina_media,
+        "municipios_vantajosos": vantajosos,
+        "municipios_pesquisados": len(estados)
+    }
+    print(f"[PARIDADE CAPITAIS] {len(estados)}/27 capitais coletadas ({falhas} falhas) | Paridade nacional: {paridade}%")
+    return nacional, estados
+
+def get_etanol_cepea(existing):
+    """Busca os indicadores semanais do etanol hidratado e anidro CEPEA/ESALQ (SP).
+    O site oficial cepea.org.br bloqueia scraping automatizado, então usamos o
+    espelho público do Notícias Agrícolas, que replica a mesma tabela do CEPEA/ESALQ
+    (Fonte: Cepea/Esalq) sem bloqueio."""
+    print("[ETANOL CEPEA] Buscando via espelho Notícias Agrícolas...")
+
+    padrao = re.compile(
+        r'\d{2}\s*-\s*(\d{2}/\d{2}/\d{4})[^0-9]{1,300}?(\d+,\d+)[^0-9+\-]{1,60}?([+\-]?\d+,\d+)',
+        re.DOTALL
+    )
+
+    def parse_indicador(url):
+        content = fetch_url(url, timeout=15)
+        if not content:
+            return None
+        resultados = []
+        for data_str, valor_str, var_str in padrao.findall(content):
+            try:
+                resultados.append({
+                    "data": data_str,
+                    "valor": round(float(valor_str.replace(',', '.')), 4),
+                    "variacao": round(float(var_str.replace(',', '.')), 2)
+                })
+            except ValueError:
+                continue
+        return resultados or None
+
+    hid = parse_indicador("https://www.noticiasagricolas.com.br/cotacoes/sucroenergetico/indicador-semanal-etanol-hidratado-cepea-esalq")
+    ani = parse_indicador("https://www.noticiasagricolas.com.br/cotacoes/sucroenergetico/indicador-semanal-etanol-anidro-cepea-esalq")
+
+    if not hid or not ani:
+        print("[ETANOL CEPEA] Falhou — mantendo últimos valores")
+        etanol = existing.get('etanol_paulinia', {
+            "hidratado": 2.2618, "hidratado_anterior": 2.2429,
+            "anidro": 2.5509, "anidro_anterior": 2.5311
+        })
+        return etanol, existing.get('historico_hidratado', [])
+
+    etanol = {
+        "hidratado": hid[0]["valor"],
+        "hidratado_anterior": hid[1]["valor"] if len(hid) > 1 else hid[0]["valor"],
+        "anidro": ani[0]["valor"],
+        "anidro_anterior": ani[1]["valor"] if len(ani) > 1 else ani[0]["valor"]
+    }
+
+    # Histórico: últimas 5 semanas, ordem cronológica (para o gráfico)
+    ultimas5 = list(reversed(hid[:5]))
+    historico = [{"data": h["data"][:5], "valor": h["valor"]} for h in ultimas5]
+
+    print(f"[ETANOL CEPEA] Hidratado R$ {etanol['hidratado']} ({hid[0]['variacao']:+.2f}%) | Anidro R$ {etanol['anidro']} ({ani[0]['variacao']:+.2f}%)")
+    return etanol, historico
+
+def _normalizar(txt):
+    """Remove acentos e coloca em minúsculas, para comparação de palavras-chave."""
+    nfkd = unicodedata.normalize('NFKD', txt)
+    return ''.join(c for c in nfkd if not unicodedata.combining(c)).lower()
+
+# Só entram notícias que toquem diretamente a atuação da RV Bioenergia (trading de
+# etanol/biodiesel). Notícias de soja, milho (fora do contexto de etanol), café, boi
+# etc. — comuns em portais agrícolas genéricos — são descartadas mesmo vindo da
+# mesma fonte, a menos que também citem um destes termos.
+PALAVRAS_RELEVANTES = [
+    "etanol", "biodiesel", "b100", "b-100", "diesel", "gasolina", "anp", "cepea",
+    "esalq", "renovabio", "cbio", "cbios", "brent", "petroleo", "cana-de-acucar",
+    "cana", "moagem", "safra de cana", "usina", "alcool combustivel", "icms",
+    "pis/cofins", "cofins", "tributacao de combustiveis", "aliquota", "subvencao",
+    "plp dos combustiveis", "combustivel", "combustiveis", "biocombustivel",
+    "biocombustiveis", "sucroenergetico", "hidratado", "anidro", "paridade",
+    "usinas sucroalcooleiras",
+]
+
+PALAVRAS_EXCLUIR = [
+    "trabalhador", "resgatad", "escravo", "tst ", "acidente", "demiss", "greve",
+    "hibrido", "eletric", "futebol", "eleicao", "candidato",
+]
+
+def _relevante(titulo):
+    t = _normalizar(titulo)
+    if any(x in t for x in PALAVRAS_EXCLUIR):
+        return False
+    return any(p in t for p in PALAVRAS_RELEVANTES)
+
+def _traduzir_en(texto):
+    """Traduz um título de notícia para inglês via API pública MyMemory (gratuita,
+    sem necessidade de chave). Se a tradução falhar por qualquer motivo (rede,
+    limite de uso, resposta inválida), devolve o texto original em português —
+    nunca deixa o pipeline quebrar por causa da tradução."""
+    try:
+        q = urllib.parse.quote(texto)
+        url = f"https://api.mymemory.translated.net/get?q={q}&langpair=pt|en"
+        content = fetch_url(url, timeout=10)
+        if not content:
+            return texto
+        data = json.loads(content)
+        traduzido = data.get('responseData', {}).get('translatedText')
+        if traduzido and len(traduzido.strip()) > 3 and "MYMEMORY WARNING" not in traduzido.upper():
+            return traduzido.strip()
+        return texto
+    except Exception:
+        return texto
+
+def get_noticias(existing):
+    """Busca notícias do setor via RSS público e mantém uma janela rolante de 7 dias:
+    notícias novas são adicionadas às existentes (sem apagar o que ainda é válido),
+    duplicatas são removidas e o que passou de 7 dias é descartado automaticamente.
+    Filtro de relevância: só entra notícia sobre etanol/biodiesel/diesel/gasolina,
+    ANP/CEPEA/ESALQ, RenovaBio/CBios, Brent/petróleo, cana-de-açúcar/safra/usina ou
+    tributação de combustíveis — descarta ruído de portais agrícolas genéricos.
+    Não depende de IA — é uma lógica de palavras-chave + data + deduplicação,
+    mais previsível e barata."""
+    print("[NOTICIAS] Buscando via RSS...")
+    feeds = [
+        ("https://www.noticiasagricolas.com.br/rss/etanol.rss", "Notícias Agrícolas", "Etanol"),
+        ("https://www.novacana.com/feed", "NovaCana", "Etanol"),
+        ("https://www.udop.com.br/rss.php", "UDOP", "Biocombustíveis"),
+    ]
+    novas = []
+    descartadas = 0
+    for url, fonte, tag_padrao in feeds:
+        content = fetch_url(url, timeout=10)
+        if not content:
+            continue
+        # Suporte a CDATA e tags diretas
+        titles = re.findall(r'<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>', content)
+        links = re.findall(r'<link>(?:<!\[CDATA\[)?(https?://[^<\]]+)(?:\]\]>)?</link>', content)
+        for i, title in enumerate(titles[1:15]):
+            title = title.strip()
+            if not title or len(title) < 10:
+                continue
+            if not _relevante(title):
+                descartadas += 1
+                continue
+            tag = "Etanol" if "etanol" in title.lower() else \
+                  "Brent" if any(w in title.lower() for w in ["brent","petróleo","petroleo","crude"]) else \
+                  "Produção" if any(w in title.lower() for w in ["safra","moagem","produção","usina"]) else \
+                  "ANP" if "anp" in title.lower() else \
+                  "RenovaBio" if any(w in title.lower() for w in ["cbio","renovabio","carbono"]) else \
+                  tag_padrao
+            novas.append({
+                "titulo": title[:120],
+                "fonte": fonte,
+                "url": links[i+1] if i+1 < len(links) else "#",
+                "tag": tag,
+                "data": datetime.now().strftime("%d/%m/%Y")
+            })
+
+    if not novas:
+        print("[NOTICIAS] RSS falhou ou nada relevante nesta rodada — mantendo janela de 7 dias já existente")
+    print(f"[NOTICIAS] {descartadas} descartadas por não serem relevantes ao segmento")
+
+    # Junta existentes + novas, deduplicando por URL (fallback: título) e mantendo a data mais antiga
+    # de cada notícia (para a janela de 7 dias contar a partir da primeira vez que ela apareceu).
+    combinadas = {}
+    for n in [x for x in existing.get('noticias', []) if _relevante(x.get('titulo',''))] + novas:
+        chave = n.get('url') if n.get('url') and n['url'] != '#' else n.get('titulo', '').lower()
+        if not chave:
+            continue
+        if chave not in combinadas:
+            combinadas[chave] = n
+        else:
+            # Mantém a versão com a data mais antiga (primeira coleta), mas atualiza tag/fonte se vier melhor
+            existente_dt = _parse_data_br(combinadas[chave]['data'])
+            nova_dt = _parse_data_br(n['data'])
+            if existente_dt and nova_dt and nova_dt < existente_dt:
+                combinadas[chave]['data'] = n['data']
+
+    # Filtra: só mantém notícias com até 7 dias
+    limite = datetime.now() - timedelta(days=7)
+    validas = []
+    for n in combinadas.values():
+        dt = _parse_data_br(n['data'])
+        if dt is None or dt >= limite:
+            validas.append(n)
+
+    # Traduz para inglês só as notícias que ainda não têm tradução salva
+    # (as que já estão na janela de 7 dias mantêm a tradução feita anteriormente)
+    traduzidas = 0
+    for n in validas:
+        if not n.get('titulo_en'):
+            n['titulo_en'] = _traduzir_en(n['titulo'])
+            traduzidas += 1
+    if traduzidas:
+        print(f"[NOTICIAS] {traduzidas} título(s) traduzido(s) para inglês")
+
+    # Ordena da mais recente para a mais antiga, limita a 10 para não sobrecarregar o painel
+    validas.sort(key=lambda n: _parse_data_br(n['data']) or datetime.min, reverse=True)
+    resultado = validas[:10]
+
+    print(f"[NOTICIAS] {len(novas)} relevantes coletadas | {len(resultado)} válidas na janela de 7 dias")
+    return resultado
+
+def _parse_data_br(data_str):
+    """Converte 'DD/MM/YYYY' em datetime; retorna None se inválido."""
+    try:
+        return datetime.strptime(data_str, "%d/%m/%Y")
+    except (ValueError, TypeError):
+        return None
+
+def semana_atual():
+    hoje = datetime.now()
+    inicio = hoje - timedelta(days=hoje.weekday())
+    fim = inicio + timedelta(days=6)
+    return f"{inicio.strftime('%d/%m')} – {fim.strftime('%d/%m/%Y')}"
+
+def main():
+    print("=" * 50)
+    print("RV Bioenergia — Coletor de Dados")
+    print(f"Executando: {datetime.now().strftime('%d/%m/%Y %H:%M')}")
+    print("=" * 50)
+
+    # Carrega dados existentes como fallback
+    existing = load_existing()
+    print(f"[INFO] Dados existentes carregados: {existing.get('atualizado','—')}")
+
+    # Brent: 100% automático
+    brent = get_brent(existing)
+    hist_brent = get_historico_brent(existing)
+
+    # Etanol CEPEA/ESALQ: automático via espelho Notícias Agrícolas
+    etanol, hist_eth = get_etanol_cepea(existing)
+
+    # Paridade e preços por estado: automático via capitais das UFs (ANP/CombustívelBR)
+    pln_diario = get_pln_diario(existing)
+    nacional, estados = get_paridade_capitais(existing)
+
+    # Notícias: RSS automático com fallback
+    noticias = get_noticias(existing)
+
+    dados = {
+        "atualizado": datetime.now().isoformat(),
+        "semana": semana_atual(),
+        "nacional": nacional,
+        "brent": brent,
+        "etanol_paulinia": etanol,
+        "historico_hidratado": hist_eth,
+        "historico_brent": hist_brent,
+        "estados": estados,
+        "pln_diario": pln_diario,
+        "diagnostico_anp": DIAG_ANP,
+        "diagnostico_pln": DIAG_PLN,
+        "noticias": noticias
+    }
+
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
+
+    print(f"\n✓ {OUTPUT_FILE} atualizado")
+    print(f"  Brent: USD {dados['brent']['valor']} ({dados['brent']['variacao']:+.2f}%)")
+    print(f"  Etanol Hid.: R$ {dados['etanol_paulinia']['hidratado']}")
+    print(f"  Paridade nacional: {dados['nacional']['paridade']}%")
+    print(f"  Notícias: {len(dados['noticias'])}")
+
+if __name__ == "__main__":
+    main()
