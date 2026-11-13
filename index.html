@@ -269,6 +269,27 @@ footer{background:#EAF3E2;border-top:1px solid var(--linha2);padding:3.5rem 3rem
   .hero-logo-title{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .hero-logo{width:110px}
 }
+
+.hero-since{display:inline-block;border:1px solid var(--verde-border);background:var(--verde-dim);color:var(--verde-txt);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:1.25rem}
+.atua{background:var(--ink)}
+.atua-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.atua-card{border:1px solid var(--linha2);border-top:3px solid var(--verde-vivo);padding:2rem 1.75rem;background:#fff;display:flex;flex-direction:column}
+.atua-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--texto);margin-bottom:.4rem}
+.atua-for{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--verde-txt);margin-bottom:1.1rem}
+.atua-card ul{list-style:none;padding:0;margin:0 0 1.6rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.atua-card li{font-size:15px;color:var(--cinza1);line-height:1.6;padding-left:1.4rem;position:relative}
+.atua-card li::before{content:'';position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--verde-vivo)}
+.atua-card .btn-p,.atua-card .btn-s{align-self:flex-start;font-size:14px;padding:11px 20px}
+.cta-final{background:#173A1B;color:#fff;text-align:center}
+.cta-final h2{color:#fff;margin-bottom:.8rem}
+.cta-final h2 em{color:var(--verde-vivo)}
+.cta-final p{font-size:1.08rem;color:rgba(255,255,255,.85);max-width:620px;margin:0 auto 2rem;line-height:1.8}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cta-final .btn-s{color:#fff;border-color:rgba(255,255,255,.5)}
+.cta-final .btn-s:hover{background:rgba(255,255,255,.1);border-color:#fff}
+@media(max-width:1024px){.atua-grid{grid-template-columns:1fr}}
+.sobre-grid>*,.contato-grid>*{min-width:0}
+@media(max-width:600px){.sobre-stats .stat-num{font-size:1.5rem!important;overflow-wrap:anywhere}}
 </style>
 </head>
 <body>
@@ -290,6 +311,7 @@ footer{background:#EAF3E2;border-top:1px solid var(--linha2);padding:3.5rem 3rem
 
 <section class="hero" id="inicio">
   <div class="hero-left reveal">
+    <div class="hero-since" data-pt="Desde 2019 no mercado de biocombustíveis" data-en="Since 2019 in the biofuels market">Desde 2019 no mercado de biocombustíveis</div><br>
     <div class="hero-eyebrow" data-pt="Biocombustíveis & Energia · Brasil & Exterior" data-en="Biofuels & Energy · Brazil & International">Biocombustíveis & Energia · Brasil & Exterior</div>
     <div class="hero-logo-title">
       <h1 data-pt="Conectamos<br>o mercado de<br><em>energia</em> com<br>precisão" data-en="Connecting<br>the <em>energy</em><br>market with<br>precision">Conectamos<br>o mercado de<br><em>energia</em> com<br>precisão</h1>
@@ -443,12 +465,43 @@ footer{background:#EAF3E2;border-top:1px solid var(--linha2);padding:3.5rem 3rem
       <p class="sec-desc" data-pt="Do biocombustível ao crédito de carbono — soluções completas para o mercado de energia." data-en="From biofuels to carbon credits — complete solutions for the energy market.">Do biocombustível ao crédito de carbono — soluções completas para o mercado de energia.</p>
     </div>
     <div class="servicos-grid reveal" style="transition-delay:0.1s">
-      <div class="servico"><div class="servico-top-line"></div><div class="serv-n">01</div><div class="serv-t" data-pt="Biocombustíveis" data-en="Biofuels">Biocombustíveis</div><div class="serv-d" data-pt="Intermediação na compra e venda de Biocombustível (Etanol Hidratado e Anidro / B100). Operações spot e contratos de longo prazo com produtores e distribuidoras." data-en="Brokerage in the purchase and sale of hydrated ethanol, anhydrous ethanol and biodiesel. Spot operations and long-term contracts with producers and distributors.">Intermediação na compra e venda de Biocombustível (Etanol Hidratado e Anidro / B100). Operações spot e contratos de longo prazo com produtores e distribuidoras.</div></div>
+      <div class="servico"><div class="servico-top-line"></div><div class="serv-n">01</div><div class="serv-t" data-pt="Biocombustíveis" data-en="Biofuels">Biocombustíveis</div><div class="serv-d" data-pt="Intermediação na compra e venda de Biocombustível (Etanol Hidratado e Anidro / B100). Operações spot e contratos de longo prazo com produtores e distribuidoras." data-en="Brokerage in the purchase and sale of Biofuels (Hydrous and Anhydrous Ethanol / B100). Spot operations and long-term contracts with producers and distributors.">Intermediação na compra e venda de Biocombustível (Etanol Hidratado e Anidro / B100). Operações spot e contratos de longo prazo com produtores e distribuidoras.</div></div>
       <div class="servico"><div class="servico-top-line"></div><div class="serv-n">02</div><div class="serv-t" data-pt="Derivados de Petróleo" data-en="Petroleum Derivatives">Derivados de Petróleo</div><div class="serv-d" data-pt="Comercialização de gasolina, diesel, querosene e outros derivados. Conexão direta entre distribuidoras e consumidores industriais." data-en="Trading of gasoline, diesel, kerosene and other derivatives. Direct connection between distributors and industrial consumers.">Comercialização de gasolina, diesel, querosene e outros derivados. Conexão direta entre distribuidoras e consumidores industriais.</div></div>
       <div class="servico"><div class="servico-top-line"></div><div class="serv-n">03</div><div class="serv-t" data-pt="Logística" data-en="Logistics">Logística</div><div class="serv-d" data-pt="Estruturação de soluções logísticas para transporte e armazenagem de combustíveis e derivados em todo o território nacional." data-en="Development of logistics solutions for the transportation and storage of fuels and derivatives throughout the national territory.">Estruturação de soluções logísticas para transporte e armazenagem de combustíveis e derivados em todo o território nacional.</div></div>
       <div class="servico"><div class="servico-top-line"></div><div class="serv-n">04</div><div class="serv-t" data-pt="Commodities" data-en="Commodities">Commodities</div><div class="serv-d" data-pt="Operações em açúcar, milho, soja e outros insumos do agronegócio integrados à cadeia de biocombustíveis e energia." data-en="Operations in sugar, corn, soybeans and other agribusiness inputs integrated into the biofuel and energy chain.">Operações em açúcar, milho, soja e outros insumos do agronegócio integrados à cadeia de biocombustíveis e energia.</div></div>
       <div class="servico"><div class="servico-top-line"></div><div class="serv-n">05</div><div class="serv-t" data-pt="Crédito de Carbono" data-en="Carbon Credits">Crédito de Carbono</div><div class="serv-d" data-pt="Assessoria e intermediação em CBios (RenovaBio) e outros instrumentos de descarbonização para indústria e transporte." data-en="Advisory and brokerage in CBios (RenovaBio) and other decarbonization instruments for industry and transport.">Assessoria e intermediação em CBios (RenovaBio) e outros instrumentos de descarbonização para indústria e transporte.</div></div>
       <div class="servico"><div class="servico-top-line"></div><div class="serv-n">06</div><div class="serv-t" data-pt="Deals Estruturados" data-en="Structured Deals">Deals Estruturados</div><div class="serv-d" data-pt="Estruturação de negócios complexos e de alto valor com análise de mercado, inteligência competitiva e gestão de risco para o setor energético." data-en="Structuring of complex, high-value deals with market analysis, competitive intelligence and risk management for the energy sector.">Estruturação de negócios complexos e de alto valor com análise de mercado, inteligência competitiva e gestão de risco para o setor energético.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO ATUAMOS -->
+<section class="atua" id="como-atuamos">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="sec-eyebrow" data-pt="Como atuamos" data-en="How we work">Como atuamos</div>
+      <h2 data-pt="Do contato ao <em>carregamento</em>" data-en="From first contact to <em>loading</em>">Do contato ao <em>carregamento</em></h2>
+      <p class="sec-desc" data-pt="Um processo claro para quem vende, para quem compra e para quem decide com informação." data-en="A clear process for those who sell, those who buy and those who decide with information.">Um processo claro para quem vende, para quem compra e para quem decide com informação.</p>
+    </div>
+    <div class="atua-grid reveal" style="transition-delay:0.1s">
+      <div class="atua-card">
+        <h3 data-pt="Para quem produz" data-en="For producers">Para quem produz</h3>
+        <div class="atua-for" data-pt="Venda do seu produto" data-en="Selling your product">Venda do seu produto</div>
+        <ul><li data-pt="Apresentamos o seu produto a compradores qualificados" data-en="We present your product to qualified buyers">Apresentamos o seu produto a compradores qualificados</li><li data-pt="Negociação de preço e condições comerciais" data-en="Negotiation of price and commercial terms">Negociação de preço e condições comerciais</li><li data-pt="Apoio na estruturação do contrato" data-en="Support in structuring the contract">Apoio na estruturação do contrato</li><li data-pt="Acompanhamento até o carregamento e a entrega" data-en="Follow-up through loading and delivery">Acompanhamento até o carregamento e a entrega</li></ul>
+        <a href="https://wa.me/5521966304990?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RV%20Bioenergia.%20Tenho%20produto%20para%20oferecer%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener" class="btn-p btn-wa"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span data-pt="Quero ofertar meu produto" data-en="I want to offer my product">Quero ofertar meu produto</span></a>
+      </div>
+      <div class="atua-card">
+        <h3 data-pt="Para quem compra" data-en="For buyers">Para quem compra</h3>
+        <div class="atua-for" data-pt="Compra de biocombustível" data-en="Buying biofuels">Compra de biocombustível</div>
+        <ul><li data-pt="Cotações e ofertas atualizadas de Etanol Hidratado e Anidro / B100" data-en="Updated quotes and offers for Hydrous and Anhydrous Ethanol / B100">Cotações e ofertas atualizadas de Etanol Hidratado e Anidro / B100</li><li data-pt="Fornecedores de diferentes regiões do Brasil" data-en="Suppliers from different regions of Brazil">Fornecedores de diferentes regiões do Brasil</li><li data-pt="Condições FOB e CIF, com apoio de logística" data-en="FOB and CIF terms, with logistics support">Condições FOB e CIF, com apoio de logística</li><li data-pt="Negociação conduzida com transparência e segurança jurídica" data-en="Negotiation conducted with transparency and legal certainty">Negociação conduzida com transparência e segurança jurídica</li></ul>
+        <a href="https://wa.me/5521966304990?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RV%20Bioenergia.%20Gostaria%20de%20receber%20cota%C3%A7%C3%A3o%20e%20ofertas%20de%20biocombust%C3%ADvel." target="_blank" rel="noopener" class="btn-p btn-wa"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span data-pt="Solicitar cotação" data-en="Request a quote">Solicitar cotação</span></a>
+      </div>
+      <div class="atua-card">
+        <h3 data-pt="Informação de mercado" data-en="Market information">Informação de mercado</h3>
+        <div class="atua-for" data-pt="Para decidir melhor" data-en="To decide better">Para decidir melhor</div>
+        <ul><li data-pt="Etanol hidratado CEPEA/ESALQ (PLN diário) e anidro semanal" data-en="CEPEA/ESALQ hydrous ethanol (daily PLN) and weekly anhydrous">Etanol hidratado CEPEA/ESALQ (PLN diário) e anidro semanal</li><li data-pt="Brent e paridade etanol × gasolina nas 27 capitais" data-en="Brent and ethanol × gasoline parity in the 27 state capitals">Brent e paridade etanol × gasolina nas 27 capitais</li><li data-pt="Atualização em todo dia útil, com a fonte de cada dado" data-en="Updated every business day, with the source of each data point">Atualização em todo dia útil, com a fonte de cada dado</li><li data-pt="Painel aberto, sem cadastro" data-en="Open dashboard, no sign-up">Painel aberto, sem cadastro</li></ul>
+        <a href="mercado.html" class="btn-s"><span data-pt="Abrir o painel de mercado" data-en="Open market dashboard">Abrir o painel de mercado</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -503,6 +556,18 @@ footer{background:#EAF3E2;border-top:1px solid var(--linha2);padding:3.5rem 3rem
   </div>
 </section>
 
+<!-- CTA FINAL -->
+<section class="cta-final" id="cotacao">
+  <div class="sec-inner reveal">
+    <h2 data-pt="Pronto para fechar o seu <em>próximo negócio</em>?" data-en="Ready to close your <em>next deal</em>?">Pronto para fechar o seu <em>próximo negócio</em>?</h2>
+    <p data-pt="Fale com a RV Bioenergia e receba cotação ou análise de mercado para a sua operação." data-en="Talk to RV Bioenergia and receive a quote or market analysis for your operation.">Fale com a RV Bioenergia e receba cotação ou análise de mercado para a sua operação.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/5521966304990?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RV%20Bioenergia.%20Gostaria%20de%20receber%20cota%C3%A7%C3%A3o%20e%20ofertas%20de%20biocombust%C3%ADvel." target="_blank" rel="noopener" class="btn-p btn-wa"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span data-pt="Solicitar cotação" data-en="Request a quote">Solicitar cotação</span></a>
+      <a href="https://wa.me/5521966304990?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RV%20Bioenergia%20e%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20de%20mercado%20para%20a%20minha%20opera%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-s" data-pt="Solicitar análise de mercado" data-en="Request market analysis">Solicitar análise de mercado</a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTATO -->
 <section class="contato" id="contato">
   <div class="sec-inner">
@@ -514,15 +579,19 @@ footer{background:#EAF3E2;border-top:1px solid var(--linha2);padding:3.5rem 3rem
         <div class="c-infos">
           <div class="c-info">
             <div class="c-icon">📱</div>
-            <div><div class="c-lbl">WhatsApp</div><div class="c-val"><a href="https://wa.me/5521966304990">+55 (21) 9 6630-4990</a></div></div>
+            <div><div class="c-lbl" data-pt="Cotações e ofertas" data-en="Quotes and offers">Cotações e ofertas</div><div class="c-val"><a href="https://wa.me/5521966304990?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RV%20Bioenergia.%20Gostaria%20de%20receber%20cota%C3%A7%C3%A3o%20e%20ofertas%20de%20biocombust%C3%ADvel." target="_blank" rel="noopener">WhatsApp +55 (21) 9 6630-4990</a></div></div>
+          </div>
+          <div class="c-info">
+            <div class="c-icon">🤝</div>
+            <div><div class="c-lbl" data-pt="Comercial — compra e venda" data-en="Sales — buying and selling">Comercial — compra e venda</div><div class="c-val"><a href="https://wa.me/5521966304990?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20RV%20Bioenergia.%20Tenho%20produto%20para%20oferecer%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener">WhatsApp +55 (21) 9 6630-4990</a></div></div>
           </div>
           <div class="c-info">
             <div class="c-icon">✉</div>
-            <div><div class="c-lbl">E-mail</div><div class="c-val"><a href="mailto:contato@rvbioenergia.com.br">contato@rvbioenergia.com.br</a></div></div>
+            <div><div class="c-lbl" data-pt="Contato geral" data-en="General contact">Contato geral</div><div class="c-val"><a href="mailto:contato@rvbioenergia.com.br">contato@rvbioenergia.com.br</a></div></div>
           </div>
           <div class="c-info">
             <div class="c-icon">in</div>
-            <div><div class="c-lbl">LinkedIn</div><div class="c-val"><a href="https://www.linkedin.com/company/40921017/" target="_blank">RV Bioenergia</a></div></div>
+            <div><div class="c-lbl" data-pt="LinkedIn" data-en="LinkedIn">LinkedIn</div><div class="c-val"><a href="https://www.linkedin.com/company/40921017/" target="_blank">RV Bioenergia</a></div></div>
           </div>
         </div>
       </div>
