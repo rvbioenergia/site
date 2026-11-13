@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36',
       'Accept-Language': 'pt-BR,pt;q=0.9'}
 EMP = {
- 'usinas': ['Usina Pindorama','Petribu','Leão Utinga','Usina Trapiche','Tereos Brasil','Cargill Brasil','Integração'],
- 'distribuidoras': ['Petrotorque','Vibra Energia','Lubrotec'],
+ 'usinas': ['Pindorama','Trapiche','Utinga','Cargill'],
+ 'distribuidoras': ['Integração Distribuidora'],
 }
 SEED = {'Tereos':['tereos.com'],'COFCO':['cofcointernational.com'],'Inpasa':['inpasa.com.br'],'Vibra Energia':['vibraenergia.com.br'],
         'Ipiranga':['ipiranga.com.br'],'Ale Combustíveis':['ale.com.br'],'Cargill':['cargill.com.br'],'Renuka':['renukadobrasil.com.br']}
@@ -60,9 +60,7 @@ def candidates(domain):
         add(m.group(1).replace('\\/','/'),'regex-logo')
     return urls[:16],title
 
-NOVA={'Lasa Lago Azul':['lago-azul','linhares-agroindustral---lasa'],'Bevap':['bevap'],'Santa Helena':['santa-helena','santa-helena-2','santa-helena-3'],'Laguna':['laguna'],'Canex':['canex'],
- 'Grupo Colorado':['colorado'],'Veredas':['veredas'],'Da Mata':['da-mata'],'Água Bonita':['agua-bonita'],'Alta Mogiana':['alta-mogiana'],'Grupo Moreno':['moreno'],
- 'Neomile':['neomille','neomille-maracaju'],'Atena':['atena'],'Renuka':['madhu','revati'],'Vale do Verdão':['vale-do-verdao-matriz'],'Fátima do Sul':['fatima-do-sul']}
+NOVA={'Pindorama':['pindorama'],'Trapiche':['trapiche'],'Utinga':['utinga']}
 def novacana(nome):
     doms=[];cands=[]
     for sl in NOVA.get(nome,[]):
@@ -85,8 +83,7 @@ def novacana(nome):
 
 
 from concurrent.futures import ThreadPoolExecutor
-KEY={'Usina Pindorama':['pindorama'],'Petribu':['petribu'],'Leão Utinga':['leao','utinga','leaoutinga'],'Usina Trapiche':['trapiche'],
- 'Tereos Brasil':['tereos'],'Cargill Brasil':['cargill'],'Integração':['integracao'],'Petrotorque':['petrotorque'],'Vibra Energia':['vibraenergia','vibra'],'Lubrotec':['lubrotec']}
+KEY={'Pindorama':['pindorama'],'Trapiche':['trapiche'],'Utinga':['utinga','leao'],'Cargill':['cargill'],'Integração Distribuidora':['integracao']}
 WORDS=('etanol','açúcar','acucar','álcool','alcool','usina','bioenergia','combust','petróleo','petroleo','distribuidora','energia','agro','lubrific','posto')
 def guess_domains(nome):
     ks=KEY[nome]; cand=[]
@@ -112,10 +109,7 @@ def guess_domains(nome):
     with ThreadPoolExecutor(40) as ex: res=[x for x in ex.map(test,cand) if x]
     return res
 
-FORCE={'Usina Pindorama':['pindorama.com.br','usinapindorama.com.br','pindoramaagro.com.br'],'Petribu':['petribu.com.br','usinapetribu.com.br'],
- 'Leão Utinga':['usinaleao.com.br','leaoutinga.com.br','utingaleao.com.br','leao.com.br'],'Usina Trapiche':['usinatrapiche.com.br','trapiche.com.br'],
- 'Tereos Brasil':['tereos.com','tereos.com.br','tereos.com/pt-br'],'Cargill Brasil':['cargill.com.br','cargill.com'],'Petrotorque':['petrotorque.com.br','www.petrotorque.com.br'],
- 'Vibra Energia':['vibraenergia.com.br'],'Lubrotec':['lubrotec.com.br','www.lubrotec.com.br']}
+FORCE={'Cargill':['cargill.com.br','cargill.com','cargill.com.br/pt']}
 def commons(q):
     out=[]
     try:
