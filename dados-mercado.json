@@ -1,17 +1,17 @@
 {
-  "atualizado": "2026-11-17T11:42:05.869851",
+  "atualizado": "2026-11-18T11:53:41.290049",
   "semana": "16/11 – 22/11/2026",
   "nacional": {
     "paridade": 71.0,
     "etanol_medio": 4.72,
     "gasolina_media": 6.65,
     "municipios_vantajosos": 11,
-    "municipios_pesquisados": 27
+    "municipios_pesquisados": 26
   },
   "brent": {
-    "valor": 92.85,
-    "variacao": 0.44,
-    "data": "17/11/2026",
+    "valor": 89.99,
+    "variacao": -3.38,
+    "data": "18/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
@@ -44,36 +44,36 @@
   ],
   "historico_brent": [
     {
-      "data": "28/09",
-      "valor": 102.59
+      "data": "29/09",
+      "valor": 103.53
     },
     {
-      "data": "05/10",
-      "valor": 100.58
+      "data": "06/10",
+      "valor": 100.2
     },
     {
-      "data": "12/10",
-      "valor": 105.69
+      "data": "13/10",
+      "valor": 106.06
     },
     {
-      "data": "19/10",
-      "valor": 108.79
+      "data": "20/10",
+      "valor": 108.82
     },
     {
-      "data": "26/10",
-      "valor": 113.88
+      "data": "27/10",
+      "valor": 115.32
     },
     {
-      "data": "03/11",
-      "valor": 103.6
+      "data": "04/11",
+      "valor": 94.62
     },
     {
-      "data": "10/11",
-      "valor": 91.49
+      "data": "11/11",
+      "valor": 92.76
     },
     {
-      "data": "17/11",
-      "valor": 92.85
+      "data": "18/11",
+      "valor": 89.99
     }
   ],
   "estados": [
@@ -100,12 +100,6 @@
       "nome": "Amazonas",
       "etanol": 4.96,
       "gasolina": 6.89
-    },
-    {
-      "uf": "BA",
-      "nome": "Bahia",
-      "etanol": 4.69,
-      "gasolina": 6.55
     },
     {
       "uf": "CE",
@@ -241,16 +235,12 @@
     }
   ],
   "pln_diario": {
-    "data": "16/11/2026",
-    "valor_m3": 3058.0,
-    "valor_litro": 3.058,
-    "anterior_litro": 3.0435,
-    "variacao_dia": 0.48,
+    "data": "17/11/2026",
+    "valor_m3": 3075.0,
+    "valor_litro": 3.075,
+    "anterior_litro": 3.058,
+    "variacao_dia": 0.56,
     "historico": [
-      {
-        "data": "03/11/2026",
-        "valor_litro": 2.968
-      },
       {
         "data": "04/11/2026",
         "valor_litro": 2.961
@@ -286,6 +276,10 @@
       {
         "data": "16/11/2026",
         "valor_litro": 3.058
+      },
+      {
+        "data": "17/11/2026",
+        "valor_litro": 3.075
       }
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
@@ -360,6 +354,54 @@
   },
   "noticias": [
     {
+      "titulo": "Mercado dobra participação no setor sucroenergético, aponta Itaú BBA",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/mercado-dobra-participacao-no-setor-sucroenergetico-aponta-itau-bba",
+      "tag": "Etanol",
+      "data": "18/11/2026",
+      "titulo_en": "Market doubles its share in the sugar-energy sector, according to Itaú BBA"
+    },
+    {
+      "titulo": "Capobianco defende saída estratégica do uso de combustíveis fósseis",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/capobianco-defende-saida-estrategica-do-uso-de-combustiveis-fosseis",
+      "tag": "Etanol",
+      "data": "18/11/2026",
+      "titulo_en": "Capobianco advocates a strategic phase-out of fossil fuels"
+    },
+    {
+      "titulo": "Petróleo fecha em alta com ataques a petroleiros no Estreito de Ormuz",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/petroleo-fecha-em-alta-com-ataques-a-petroleiros-no-estreito-de-ormuz",
+      "tag": "Brent",
+      "data": "18/11/2026",
+      "titulo_en": "Oil prices close higher amid attacks on tankers in the Strait of Hormuz"
+    },
+    {
+      "titulo": "Ajuste fiscal pode impactar financiamento do setor de energia, incluindo biocombustíveis",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/ajuste-fiscal-pode-impactar-financiamento-do-setor-de-energia-incluindo-biocombustiveis",
+      "tag": "Etanol",
+      "data": "18/11/2026",
+      "titulo_en": "Fiscal adjustment could impact financing for the energy sector, including biofuels"
+    },
+    {
+      "titulo": "Usinas de cana devem ter a menor margem operacional em dez anos, projeta Itaú BBA",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/usinas-de-cana-devem-ter-a-menor-margem-operacional-em-dez-anos-projeta-itau-bba",
+      "tag": "Produção",
+      "data": "18/11/2026",
+      "titulo_en": "Sugarcane mills are expected to have their lowest operating margin in ten years, according to Itaú BBA projections."
+    },
+    {
+      "titulo": "O que caracteriza uma usina rentável? Executivos apontam as chaves do próximo ciclo",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/o-que-caracteriza-uma-usina-rentavel-executivos-apontam-as-chaves-do-proximo-ciclo",
+      "tag": "Produção",
+      "data": "18/11/2026",
+      "titulo_en": "What are the hallmarks of a profitable mill? Executives point to the keys to the next cycle"
+    },
+    {
       "titulo": "Amaggi opera primeira pá carregadeira movida a etanol em fazenda de Mato Grosso",
       "fonte": "NovaCana",
       "url": "https://www.novacana.com/noticias/amaggi-opera-primeira-pa-carregadeira-movida-a-etanol-em-fazenda-de-mato-grosso",
@@ -390,54 +432,6 @@
       "tag": "Etanol",
       "data": "17/11/2026",
       "titulo_en": "Prices at the pumps: Ethanol rises at the pumps and at the mills; gasoline also up"
-    },
-    {
-      "titulo": "Setor de combustíveis aponta risco de distorção em novas regras do RenovaBio",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/setor-de-combustiveis-aponta-risco-de-distorcao-em-novas-regras-do-renovabio",
-      "tag": "RenovaBio",
-      "data": "17/11/2026",
-      "titulo_en": "Fuel sector warns of risk of distortion in new RenovaBio rules"
-    },
-    {
-      "titulo": "Bomba em usina de etanol nos EUA provoca evacuação de mais de 5 mil pessoas",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/bomba-em-usina-de-etanol-nos-eua-provoca-evacuacao-de-mais-de-5-mil-pessoas",
-      "tag": "Etanol",
-      "data": "17/11/2026",
-      "titulo_en": "Explosion at U.S. ethanol plant leads to evacuation of over 5,000 people"
-    },
-    {
-      "titulo": "ONU pede agilidade enquanto COP31 enfrenta divisão em torno dos combustíveis fósseis",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/onu-pede-agilidade-enquanto-cop31-enfrenta-divisao-em-torno-dos-combustiveis-fosseis",
-      "tag": "Etanol",
-      "data": "16/11/2026",
-      "titulo_en": "UN calls for swift action as COP31 grapples with divisions over fossil fuels"
-    },
-    {
-      "titulo": "Negociações da COP31 enfrentam atritos sobre futuro dos combustíveis fósseis",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/negociacoes-da-cop31-enfrentam-atritos-sobre-futuro-dos-combustiveis-fosseis",
-      "tag": "Etanol",
-      "data": "16/11/2026",
-      "titulo_en": "COP31 negotiations face friction over the future of fossil fuels"
-    },
-    {
-      "titulo": "Petróleo tem segunda perda semanal com foco em excesso de oferta e pressão sobre Irã",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/petroleo-tem-segunda-perda-semanal-com-foco-em-excesso-de-oferta-e-pressao-sobre-ira",
-      "tag": "Brent",
-      "data": "16/11/2026",
-      "titulo_en": "Oil prices see second weekly loss amid concerns over oversupply and pressure on Iran"
-    },
-    {
-      "titulo": "Etanol hidratado sobe 1,63% e anidro cai 3,37% na semana nas usinas paulistas",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/etanol-hidratado-sobe-1-63-e-anidro-cai-3-37-na-semana-nas-usinas-paulistas",
-      "tag": "Etanol",
-      "data": "16/11/2026",
-      "titulo_en": "Hydrated ethanol rises 1.63% and anhydrous ethanol falls 3.37% over the week at São Paulo mills"
     }
   ]
 }
