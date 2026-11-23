@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-23T17:57:32.547995",
+  "atualizado": "2026-11-23T18:01:52.267998",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 71.0,
@@ -9,8 +9,8 @@
     "municipios_pesquisados": 27
   },
   "brent": {
-    "valor": 87.28,
-    "variacao": -5.71,
+    "valor": 87.32,
+    "variacao": -5.67,
     "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
@@ -74,7 +74,7 @@
     },
     {
       "data": "23/11",
-      "valor": 87.28
+      "valor": 87.32
     }
   ],
   "estados": [
@@ -297,7 +297,36 @@
     "ed46": "download falhou (sintese-precos-n46.pdf): <urlopen error [Errno 104] Connection reset by peer>",
     "ed45": "download falhou (sintese-precos-n45.pdf): <urlopen error [Errno 104] Connection reset by peer>",
     "ed44": "download falhou (sintese-precos-n44.pdf): <urlopen error [Errno 104] Connection reset by peer>",
-    "aviso": "nenhuma das edições 47..44 pôde ser lida"
+    "aviso": "nenhuma das edições 47..44 pôde ser lida",
+    "coleta_capitais": {
+      "AC": "n/d",
+      "AL": "n/d",
+      "AP": "n/d",
+      "AM": "n/d",
+      "BA": "n/d",
+      "CE": "n/d",
+      "DF": "n/d",
+      "ES": "n/d",
+      "GO": "n/d",
+      "MA": "n/d",
+      "MT": "n/d",
+      "MS": "n/d",
+      "MG": "n/d",
+      "PA": "n/d",
+      "PB": "n/d",
+      "PR": "n/d",
+      "PE": "n/d",
+      "PI": "n/d",
+      "RJ": "n/d",
+      "RN": "n/d",
+      "RS": "n/d",
+      "RO": "n/d",
+      "RR": "n/d",
+      "SC": "n/d",
+      "SP": "n/d",
+      "SE": "n/d",
+      "TO": "n/d"
+    }
   },
   "diagnostico_pln": {
     "status": "ok"
