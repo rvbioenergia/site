@@ -448,26 +448,46 @@ def get_noticias(existing):
     Não depende de IA — é uma lógica de palavras-chave + data + deduplicação,
     mais previsível e barata."""
     print("[NOTICIAS] Buscando via RSS...")
+    import html as _html, email.utils as _eu
+    # Fontes que respondem no servidor do GitHub (testadas em 23/11/2026). Notícias Agrícolas (404) e
+    # UDOP (feed sem itens) foram removidas; NovaCana sozinha tomava todas as 10 vagas.
     feeds = [
-        ("https://www.noticiasagricolas.com.br/rss/etanol.rss", "Notícias Agrícolas", "Etanol"),
         ("https://www.novacana.com/feed", "NovaCana", "Etanol"),
-        ("https://www.udop.com.br/rss.php", "UDOP", "Biocombustíveis"),
+        ("https://www.biodieselbr.com/rss.xml", "BiodieselBR", "Biocombustíveis"),
+        ("https://eixos.com.br/feed/", "Eixos", "Energia"),
+        ("https://jornalcana.com.br/feed/", "JornalCana", "Produção"),
+        ("https://www.petronoticias.com.br/feed", "Petronotícias", "Brent"),
+        ("https://www.canalrural.com.br/feed/", "Canal Rural", "Etanol"),
     ]
     novas = []
     descartadas = 0
+    agora = datetime.now()
     for url, fonte, tag_padrao in feeds:
-        content = fetch_url(url, timeout=10)
+        content = fetch_url(url, timeout=15)
         if not content:
             continue
-        # Suporte a CDATA e tags diretas
-        titles = re.findall(r'<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>', content)
-        links = re.findall(r'<link>(?:<!\[CDATA\[)?(https?://[^<\]]+)(?:\]\]>)?</link>', content)
-        for i, title in enumerate(titles[1:15]):
-            title = title.strip()
-            if not title or len(title) < 10:
+        for item in re.findall(r'<item[ >].*?</item>', content, re.DOTALL)[:15]:
+            mt = re.search(r'<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>', item, re.DOTALL)
+            ml = re.search(r'<link>(?:<!\[CDATA\[)?\s*(https?://[^<\]\s]+)', item)
+            if not mt:
+                continue
+            title = _html.unescape(re.sub(r'\s+', ' ', mt.group(1))).strip()
+            if title.isupper():
+                title = title.capitalize()
+            if len(title) < 10:
                 continue
             if not _relevante(title):
                 descartadas += 1
+                continue
+            # Data real de publicação (pubDate); sem ela, usa hoje
+            data_pub = agora
+            mp = re.search(r'<pubDate>(.*?)</pubDate>', item)
+            if mp:
+                try:
+                    data_pub = _eu.parsedate_to_datetime(mp.group(1).strip()).replace(tzinfo=None)
+                except Exception:
+                    pass
+            if data_pub < agora - timedelta(days=7):
                 continue
             tag = "Etanol" if "etanol" in title.lower() else \
                   "Brent" if any(w in title.lower() for w in ["brent","petróleo","petroleo","crude"]) else \
@@ -478,9 +498,9 @@ def get_noticias(existing):
             novas.append({
                 "titulo": title[:120],
                 "fonte": fonte,
-                "url": links[i+1] if i+1 < len(links) else "#",
+                "url": ml.group(1) if ml else "#",
                 "tag": tag,
-                "data": datetime.now().strftime("%d/%m/%Y")
+                "data": data_pub.strftime("%d/%m/%Y")
             })
 
     if not novas:
@@ -523,7 +543,17 @@ def get_noticias(existing):
 
     # Ordena da mais recente para a mais antiga, limita a 10 para não sobrecarregar o painel
     validas.sort(key=lambda n: _parse_data_br(n['data']) or datetime.min, reverse=True)
-    resultado = validas[:10]
+    # Diversidade: revezamento entre as fontes (a mais recente de cada uma por rodada),
+    # para nenhuma fonte ocupar o painel inteiro.
+    por_fonte = {}
+    for n in validas:
+        por_fonte.setdefault(n.get('fonte', '?'), []).append(n)
+    resultado = []
+    while len(resultado) < 10 and any(por_fonte.values()):
+        for f in list(por_fonte):
+            if por_fonte[f] and len(resultado) < 10:
+                resultado.append(por_fonte[f].pop(0))
+    resultado.sort(key=lambda n: _parse_data_br(n['data']) or datetime.min, reverse=True)
 
     print(f"[NOTICIAS] {len(novas)} relevantes coletadas | {len(resultado)} válidas na janela de 7 dias")
     return resultado
