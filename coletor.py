@@ -411,6 +411,9 @@ PALAVRAS_RELEVANTES = [
 PALAVRAS_EXCLUIR = [
     "trabalhador", "resgatad", "escravo", "tst ", "acidente", "demiss", "greve",
     "hibrido", "eletric", "futebol", "eleicao", "candidato",
+    # fora do segmento (entram por citar Cepea/usina/etc.)
+    " ovo", "ovos ", "leite", "frango", "suino", "bovino", "boi gordo", "cafe ", "laranja", "tilapia",
+    "solar", "solares", "fotovolt", "eolic", "hidreletric",
 ]
 
 def _relevante(titulo):
@@ -473,7 +476,8 @@ def get_noticias(existing):
                 continue
             title = _html.unescape(re.sub(r'\s+', ' ', mt.group(1))).strip()
             if title.isupper():
-                title = title.capitalize()
+                peq = {'de','da','do','das','dos','e','em','no','na','nos','nas','por','para','com','a','o','as','os','ao','mas','que'}
+                title = ' '.join(w.lower() if (i and w.lower() in peq) else w.capitalize() for i, w in enumerate(title.split()))
             if len(title) < 10:
                 continue
             if not _relevante(title):
