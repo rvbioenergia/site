@@ -1,16 +1,16 @@
 {
-  "atualizado": "2026-11-23T18:01:52.267998",
+  "atualizado": "2026-11-23T18:07:34.347951",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
-    "paridade": 71.0,
-    "etanol_medio": 4.72,
-    "gasolina_media": 6.65,
+    "paridade": 70.4,
+    "etanol_medio": 4.69,
+    "gasolina_media": 6.66,
     "municipios_vantajosos": 11,
-    "municipios_pesquisados": 27
+    "municipios_pesquisados": 26
   },
   "brent": {
-    "valor": 87.32,
-    "variacao": -5.67,
+    "valor": 87.35,
+    "variacao": -5.64,
     "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
@@ -74,7 +74,7 @@
     },
     {
       "data": "23/11",
-      "valor": 87.32
+      "valor": 87.35
     }
   ],
   "estados": [
@@ -89,12 +89,6 @@
       "nome": "Alagoas",
       "etanol": 4.9,
       "gasolina": 6.59
-    },
-    {
-      "uf": "AP",
-      "nome": "Amapá",
-      "etanol": 5.59,
-      "gasolina": 6.34
     },
     {
       "uf": "AM",
@@ -305,10 +299,10 @@
     "ed45": "download falhou (sintese-precos-n45.pdf): <urlopen error [Errno 104] Connection reset by peer>",
     "ed44": "download falhou (sintese-precos-n44.pdf): <urlopen error [Errno 104] Connection reset by peer>",
     "aviso": "nenhuma das edições 47..44 pôde ser lida",
+    "plano_b": "reaproveitado resultado da edição 45 (01/11/2026 a 07/11/2026)",
     "coleta_capitais": {
       "AC": "n/d",
       "AL": "n/d",
-      "AP": "n/d",
       "AM": "n/d",
       "BA": "n/d",
       "CE": "n/d",
