@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-23T17:37:46.570330",
+  "atualizado": "2026-11-23T17:42:07.393889",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 71.0,
@@ -9,8 +9,8 @@
     "municipios_pesquisados": 27
   },
   "brent": {
-    "valor": 87.3,
-    "variacao": -5.69,
+    "valor": 87.41,
+    "variacao": -5.57,
     "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
@@ -74,7 +74,7 @@
     },
     {
       "data": "23/11",
-      "valor": 87.3
+      "valor": 87.41
     }
   ],
   "estados": [
@@ -292,70 +292,9 @@
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
   },
   "diagnostico_anp": {
-    "ed47": "download falhou: HTTP Error 404: Not Found",
-    "ed46": "download falhou: HTTP Error 404: Not Found",
-    "periodo": "01/11/2026 a 07/11/2026",
-    "linhas_São Paulo": [
-      "São Paulo 6,35",
-      "São Paulo 4,01",
-      "São Paulo",
-      "São Paulo 7,25"
-    ],
-    "linhas_Belo Horizonte": [
-      "Belo Horizonte 6,48",
-      "Belo Horizonte 4,46",
-      "Belo Horizonte 6,88",
-      "Belo Horizonte 113,54"
-    ],
-    "linhas_Rio de Janeiro": [
-      "Rio de Janeiro 6,48",
-      "Rio de Janeiro 4,77",
-      "Rio de Janeiro 7,06",
-      "Rio de Janeiro 100,60"
-    ],
-    "linhas_Curitiba": [
-      "Curitiba 6,76",
-      "Curitiba 4,64",
-      "Curitiba 7,26",
-      "Curitiba | R$ 7,26"
-    ],
-    "linhas_Porto Alegre": [
-      "Porto Alegre 5,89",
-      "Porto Alegre 4,46",
-      "Porto Alegre",
-      "Porto Alegre 6,93"
-    ],
-    "linhas_Salvador": [
-      "Salvador 6,43",
-      "Salvador 4,44",
-      "Salvador 7,85",
-      "Salvador | R$ 7,85"
-    ],
-    "linhas_Goiânia": [
-      "Goiânia 6,15",
-      "Goiânia 3,66",
-      "Goiânia",
-      "Goiânia | R$ 3,66"
-    ],
-    "linhas_Brasília": [
-      "Brasília 6,57",
-      "Brasília | R$ 6,57",
-      "Brasília 4,51",
-      "Brasília | R$ 4,51"
-    ],
-    "linhas_Florianópolis": [
-      "Florianópolis 6,45",
-      "Florianópolis 4,62",
-      "Florianópolis | R$ 4,62",
-      "Florianópolis 7,29"
-    ],
-    "linhas_Recife": [
-      "Recife 6,85",
-      "Recife 4,82",
-      "Recife 7,07",
-      "Recife 102,86"
-    ],
-    "ed45": "ok, 18464 chars; sem preço: []; trecho Macapá: Macapá 6,31 | Macapá - | Macapá 7,14 | Macapá | R$ 7,14 | Macapá 127,46"
+    "ed47": "download falhou: <urlopen error [Errno 104] Connection reset by peer>",
+    "ed46": "download falhou: <urlopen error [Errno 104] Connection reset by peer>",
+    "ed45": "download falhou: <urlopen error [Errno 104] Connection reset by peer>"
   },
   "diagnostico_pln": {
     "status": "ok"
@@ -370,6 +309,22 @@
       "titulo_en": "Dispute over transition from fossil fuels leads COP31 to failure"
     },
     {
+      "titulo": "ICMS sobre o diesel acumula alta de 735,7% desde 2002",
+      "fonte": "BiodieselBR",
+      "url": "https://www.biodieselbr.com/noticias/regulacao/impostos/icms-sobre-o-diesel-acumula-alta-de-735-7-desde-2002",
+      "tag": "Biocombustíveis",
+      "data": "23/11/2026",
+      "titulo_en": "ICMS on diesel has risen by 735.7% since 2002"
+    },
+    {
+      "titulo": "Preço do ovo volta a subir, mas demanda pode esfriar, diz Cepea",
+      "fonte": "Canal Rural",
+      "url": "https://www.canalrural.com.br/aves-e-suinos/preco-do-ovo-volta-a-subir-mas-demanda-pode-esfriar-diz-cepea/",
+      "tag": "Etanol",
+      "data": "23/11/2026",
+      "titulo_en": "Egg prices are rising again, but demand may cool off, says Cepea"
+    },
+    {
       "titulo": "Em sessão volátil, petróleo fecha em alta apesar de fluxo maior em Ormuz",
       "fonte": "NovaCana",
       "url": "https://www.novacana.com/noticias/em-sessao-volatil-petroleo-fecha-em-alta-apesar-de-fluxo-maior-em-ormuz",
@@ -378,68 +333,52 @@
       "titulo_en": "In a volatile session, oil closes higher despite increased flow through the Strait of Hormuz"
     },
     {
-      "titulo": "Batatais e Cevasa ampliam moagem em 5,4%, mas receita cai 30,5% no 1º semestre da safra",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/batatais-e-cevasa-ampliam-moagem-em-5-4-mas-receita-cai-30-5-no-1-semestre-da-safra",
-      "tag": "Produção",
-      "data": "23/11/2026",
-      "titulo_en": "Batatais and Cevasa increase milling by 5.4%, but revenue falls by 30.5% in the first half of the harvest"
-    },
-    {
-      "titulo": "Usina Itajobi foi vendida para Beto Louco e Primo por apenas R$ 100",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/usina-itajobi-foi-vendida-para-beto-louco-e-primo-por-apenas-r-100",
-      "tag": "Produção",
-      "data": "23/11/2026",
-      "titulo_en": "Itajobi Mill was sold to Beto Louco and Primo for just R$100"
-    },
-    {
-      "titulo": "Brasil exporta 216,44 mi L de etanol em outubro, melhor resultado para o mês desde 2023",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/brasil-exporta-216-44-mi-l-de-etanol-em-outubro-melhor-resultado-para-o-mes-desde-2023",
-      "tag": "Etanol",
-      "data": "23/11/2026",
-      "titulo_en": "Brazil exports 216.44 million liters of ethanol in October, the best result for the month since 2023"
-    },
-    {
-      "titulo": "Mais de cem pessoas denunciam condições de trabalho em usina de Goiás",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/mais-de-cem-pessoas-denunciam-condicoes-de-trabalho-analogo-a-escravidao-em-usina-de-go",
-      "tag": "Produção",
-      "data": "23/11/2026",
-      "titulo_en": "Over 100 people report working conditions at a plant in Goiás"
-    },
-    {
-      "titulo": "Importações de etanol anidro devem crescer 59% no início de 2027, aponta StoneX",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/importacoes-de-etanol-anidro-devem-crescer-59-no-inicio-de-2027-aponta-stonex",
-      "tag": "Etanol",
-      "data": "23/11/2026",
-      "titulo_en": "Anhydrous ethanol imports are expected to grow 59% by early 2027, according to StoneX"
-    },
-    {
       "titulo": "Subvenção dos combustíveis pode deixar herança de R$ 45 bilhões para 2027",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/subvencao-dos-combustiveis-pode-deixar-heranca-de-r-45-bilhoes-para-2027",
-      "tag": "Etanol",
+      "fonte": "BiodieselBR",
+      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/subvencao-dos-combustiveis-pode-deixar-heranca-de-r-45-bilhoes-para-2027",
+      "tag": "Biocombustíveis",
       "data": "23/11/2026",
       "titulo_en": "Fuel subsidies could leave a legacy of R$45 billion by 2027"
     },
     {
-      "titulo": "Brasil e Índia realizam reunião sobre avanços em petróleo, gás natural e biocombustíveis",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/brasil-e-india-realizam-reuniao-sobre-avancos-em-petroleo-gas-natural-e-biocombustiveis",
+      "titulo": "Iranianos atacam dois navios petroleiros no estreito de ormuz mas não intrerrompe tráfego de petróleo",
+      "fonte": "Petronotícias",
+      "url": "https://petronoticias.com.br/iranianos-atacam-dois-navios-petroleiros-no-estreito-de-ormuz-mas-nao-intrerrompe-trafego-de-petroleo/",
       "tag": "Brent",
-      "data": "20/11/2026",
-      "titulo_en": "Brazil and India hold meeting on advances in oil, natural gas, and biofuels"
+      "data": "21/11/2026",
+      "titulo_en": "Iranians attack two oil tankers in the Strait of Hormuz, but oil traffic is not interrupted"
     },
     {
-      "titulo": "Avanço do etanol de milho acelera confinamento bovino no Brasil",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/boom-do-etanol-de-milho-no-brasil-acelera-confinamento-bovino",
+      "titulo": "Brasol assume operação e manutenção de 49,2 mwp em usinas solares do fundo snel11",
+      "fonte": "Petronotícias",
+      "url": "https://petronoticias.com.br/brasol-assume-operacao-e-manutencao-de-492-mwp-em-usinas-solares-do-fundo-snel11/",
+      "tag": "Produção",
+      "data": "21/11/2026",
+      "titulo_en": "Brasol takes over operation and maintenance of 49.2 MWp at solar plants owned by the SNEL11 fund"
+    },
+    {
+      "titulo": "Petróleo fecha perto da estabilidade com atenção dividida entre risco no Irã e oferta",
+      "fonte": "Eixos",
+      "url": "https://eixos.com.br/petroleo-e-gas/petroleo-fecha-perto-da-estabilidade-com-atencao-dividida-entre-risco-no-ira-e-oferta/",
+      "tag": "Brent",
+      "data": "19/11/2026",
+      "titulo_en": "Oil closes near stability with attention divided between risk in Iran and supply"
+    },
+    {
+      "titulo": "Expansão do etanol de milho transforma o mercado brasileiro e fortalece preços no interior",
+      "fonte": "JornalCana",
+      "url": "https://jornalcana.com.br/mercado/expansao-do-etanol-de-milho-transforma-o-mercado-brasileiro-e-fortalece-precos-no-interior/",
       "tag": "Etanol",
-      "data": "20/11/2026",
-      "titulo_en": "The rise of corn ethanol is accelerating cattle feedlot operations in Brazil"
+      "data": "19/11/2026",
+      "titulo_en": "Expansion of corn ethanol transforms the Brazilian market and strengthens prices in the interior"
+    },
+    {
+      "titulo": "Xi, Trump e Putin prometem ampliar oferta de derivados de petróleo e discutir riscos nucleares",
+      "fonte": "Eixos",
+      "url": "https://eixos.com.br/petroleo-e-gas/xi-trump-e-putin-prometem-ampliar-oferta-de-derivados-de-petroleo-e-discutir-riscos-nucleares/",
+      "tag": "Brent",
+      "data": "19/11/2026",
+      "titulo_en": "Xi, Trump, and Putin pledge to increase the supply of petroleum products and discuss nuclear risks"
     }
   ]
 }
