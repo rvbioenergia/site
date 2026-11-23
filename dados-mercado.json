@@ -1,6 +1,6 @@
 {
-  "atualizado": "2026-11-20T11:48:38.836253",
-  "semana": "16/11 – 22/11/2026",
+  "atualizado": "2026-11-23T11:46:18.552505",
+  "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 71.0,
     "etanol_medio": 4.72,
@@ -9,9 +9,9 @@
     "municipios_pesquisados": 27
   },
   "brent": {
-    "valor": 89.27,
-    "variacao": -2.95,
-    "data": "20/11/2026",
+    "valor": 88.31,
+    "variacao": -4.6,
+    "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
@@ -44,36 +44,36 @@
   ],
   "historico_brent": [
     {
-      "data": "01/10",
-      "valor": 102.25
+      "data": "04/10",
+      "valor": 100.32
     },
     {
-      "data": "08/10",
-      "valor": 104.72
+      "data": "11/10",
+      "valor": 106.65
     },
     {
-      "data": "15/10",
-      "valor": 109.86
+      "data": "18/10",
+      "valor": 109.55
     },
     {
-      "data": "22/10",
-      "valor": 116.72
+      "data": "25/10",
+      "valor": 115.81
     },
     {
-      "data": "29/10",
-      "valor": 117.64
+      "data": "02/11",
+      "valor": 104.77
     },
     {
-      "data": "06/11",
-      "valor": 98.32
+      "data": "09/11",
+      "valor": 92.57
     },
     {
-      "data": "13/11",
-      "valor": 95.84
+      "data": "16/11",
+      "valor": 92.44
     },
     {
-      "data": "20/11",
-      "valor": 89.27
+      "data": "23/11",
+      "valor": 88.31
     }
   ],
   "estados": [
@@ -291,6 +291,7 @@
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
   },
   "diagnostico_anp": {
+    "ed47": "download falhou: HTTP Error 404: Not Found",
     "ed46": "download falhou: HTTP Error 404: Not Found",
     "periodo": "01/11/2026 a 07/11/2026",
     "linhas_São Paulo": [
@@ -360,6 +361,22 @@
   },
   "noticias": [
     {
+      "titulo": "Disputa sobre transição dos combustíveis fósseis leva COP31 ao fracasso",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/disputa-sobre-transicao-dos-combustiveis-fosseis-leva-cop31-ao-fracasso",
+      "tag": "Etanol",
+      "data": "23/11/2026",
+      "titulo_en": "Dispute over transition from fossil fuels leads COP31 to failure"
+    },
+    {
+      "titulo": "Em sessão volátil, petróleo fecha em alta apesar de fluxo maior em Ormuz",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/em-sessao-volatil-petroleo-fecha-em-alta-apesar-de-fluxo-maior-em-ormuz",
+      "tag": "Brent",
+      "data": "23/11/2026",
+      "titulo_en": "In a volatile session, oil closes higher despite increased flow through the Strait of Hormuz"
+    },
+    {
       "titulo": "Brasil e Índia realizam reunião sobre avanços em petróleo, gás natural e biocombustíveis",
       "fonte": "NovaCana",
       "url": "https://www.novacana.com/noticias/brasil-e-india-realizam-reuniao-sobre-avancos-em-petroleo-gas-natural-e-biocombustiveis",
@@ -422,22 +439,6 @@
       "tag": "Etanol",
       "data": "19/11/2026",
       "titulo_en": "U.S. ethanol production down 0.35% week-on-week to 1.126 million barrels per day"
-    },
-    {
-      "titulo": "Pecege revisa moagem do Centro-Sul para 635,4 mi t, mas cana bisada deve superar 40 mi t",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/pecege-revisa-moagem-do-centro-sul-para-635-4-mi-t-mas-cana-bisada-deve-superar-40-mi-t",
-      "tag": "Produção",
-      "data": "19/11/2026",
-      "titulo_en": "Pecege revises Center-South crush to 635.4 million tons, but second-harvest cane should exceed 40 million tons"
-    },
-    {
-      "titulo": "Subsídios para conter combustíveis chegam perto de R$ 60 bi e preços seguem pressionados",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/subsidios-para-conter-combustiveis-chegam-perto-de-r-60-bi-e-precos-seguem-pressionados",
-      "tag": "Etanol",
-      "data": "19/11/2026",
-      "titulo_en": "Fuel subsidies close to R$60 billion, with prices still under pressure"
     }
   ]
 }
