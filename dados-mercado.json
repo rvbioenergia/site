@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-23T17:47:53.343931",
+  "atualizado": "2026-11-23T17:57:32.547995",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 71.0,
@@ -9,8 +9,8 @@
     "municipios_pesquisados": 27
   },
   "brent": {
-    "valor": 87.3,
-    "variacao": -5.69,
+    "valor": 87.28,
+    "variacao": -5.71,
     "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
@@ -74,7 +74,7 @@
     },
     {
       "data": "23/11",
-      "valor": 87.3
+      "valor": 87.28
     }
   ],
   "estados": [
@@ -291,10 +291,13 @@
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
   },
+  "anp_ultima": null,
   "diagnostico_anp": {
-    "ed47": "download falhou: <urlopen error [Errno 104] Connection reset by peer>",
-    "ed46": "download falhou: <urlopen error [Errno 104] Connection reset by peer>",
-    "ed45": "download falhou: <urlopen error [Errno 104] Connection reset by peer>"
+    "ed47": "download falhou (sintese-precos-n47.pdf): <urlopen error [Errno 104] Connection reset by peer>",
+    "ed46": "download falhou (sintese-precos-n46.pdf): <urlopen error [Errno 104] Connection reset by peer>",
+    "ed45": "download falhou (sintese-precos-n45.pdf): <urlopen error [Errno 104] Connection reset by peer>",
+    "ed44": "download falhou (sintese-precos-n44.pdf): <urlopen error [Errno 104] Connection reset by peer>",
+    "aviso": "nenhuma das edições 47..44 pôde ser lida"
   },
   "diagnostico_pln": {
     "status": "ok"
