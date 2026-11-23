@@ -196,6 +196,7 @@ def get_capitais_sem_preco_anp(existing=None):
                     cand = urllib.request.urlopen(req, timeout=30).read()
                 except Exception as e:
                     DIAG_ANP[f'ed{ed}'] = f'download falhou ({nome}): {str(e)[:60]}'
+                    import time; time.sleep(2)
                     continue
                 if cand.startswith(b'%PDF'):
                     dados = cand

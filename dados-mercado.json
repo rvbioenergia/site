@@ -291,7 +291,14 @@
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
   },
-  "anp_ultima": null,
+  "anp_ultima": {
+    "edicao": 45,
+    "periodo": "01/11/2026 a 07/11/2026",
+    "sem_preco": [
+      "AP"
+    ],
+    "lido_em": "2026-11-12T12:00:00"
+  },
   "diagnostico_anp": {
     "ed47": "download falhou (sintese-precos-n47.pdf): <urlopen error [Errno 104] Connection reset by peer>",
     "ed46": "download falhou (sintese-precos-n46.pdf): <urlopen error [Errno 104] Connection reset by peer>",
