@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-23T11:46:18.552505",
+  "atualizado": "2026-11-23T17:37:46.570330",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 71.0,
@@ -9,26 +9,19 @@
     "municipios_pesquisados": 27
   },
   "brent": {
-    "valor": 88.31,
-    "variacao": -4.6,
+    "valor": 87.3,
+    "variacao": -5.69,
     "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
-    "hidratado": 2.8799,
-    "hidratado_anterior": 2.8135,
-    "anidro": 3.5831,
-    "anidro_anterior": 3.3997
+    "hidratado": 2.9806,
+    "hidratado_anterior": 2.9269,
+    "anidro": 3.5412,
+    "anidro_anterior": 3.4624,
+    "semana_fim": "19/11/2026"
   },
   "historico_hidratado": [
-    {
-      "data": "09/10",
-      "valor": 2.6374
-    },
-    {
-      "data": "16/10",
-      "valor": 2.6892
-    },
     {
       "data": "23/10",
       "valor": 2.74
@@ -40,6 +33,14 @@
     {
       "data": "06/11",
       "valor": 2.8799
+    },
+    {
+      "data": "13/11",
+      "valor": 2.9269
+    },
+    {
+      "data": "19/11",
+      "valor": 2.9806
     }
   ],
   "historico_brent": [
@@ -73,7 +74,7 @@
     },
     {
       "data": "23/11",
-      "valor": 88.31
+      "valor": 87.3
     }
   ],
   "estados": [
@@ -377,6 +378,54 @@
       "titulo_en": "In a volatile session, oil closes higher despite increased flow through the Strait of Hormuz"
     },
     {
+      "titulo": "Batatais e Cevasa ampliam moagem em 5,4%, mas receita cai 30,5% no 1º semestre da safra",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/batatais-e-cevasa-ampliam-moagem-em-5-4-mas-receita-cai-30-5-no-1-semestre-da-safra",
+      "tag": "Produção",
+      "data": "23/11/2026",
+      "titulo_en": "Batatais and Cevasa increase milling by 5.4%, but revenue falls by 30.5% in the first half of the harvest"
+    },
+    {
+      "titulo": "Usina Itajobi foi vendida para Beto Louco e Primo por apenas R$ 100",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/usina-itajobi-foi-vendida-para-beto-louco-e-primo-por-apenas-r-100",
+      "tag": "Produção",
+      "data": "23/11/2026",
+      "titulo_en": "Itajobi Mill was sold to Beto Louco and Primo for just R$100"
+    },
+    {
+      "titulo": "Brasil exporta 216,44 mi L de etanol em outubro, melhor resultado para o mês desde 2023",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/brasil-exporta-216-44-mi-l-de-etanol-em-outubro-melhor-resultado-para-o-mes-desde-2023",
+      "tag": "Etanol",
+      "data": "23/11/2026",
+      "titulo_en": "Brazil exports 216.44 million liters of ethanol in October, the best result for the month since 2023"
+    },
+    {
+      "titulo": "Mais de cem pessoas denunciam condições de trabalho em usina de Goiás",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/mais-de-cem-pessoas-denunciam-condicoes-de-trabalho-analogo-a-escravidao-em-usina-de-go",
+      "tag": "Produção",
+      "data": "23/11/2026",
+      "titulo_en": "Over 100 people report working conditions at a plant in Goiás"
+    },
+    {
+      "titulo": "Importações de etanol anidro devem crescer 59% no início de 2027, aponta StoneX",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/importacoes-de-etanol-anidro-devem-crescer-59-no-inicio-de-2027-aponta-stonex",
+      "tag": "Etanol",
+      "data": "23/11/2026",
+      "titulo_en": "Anhydrous ethanol imports are expected to grow 59% by early 2027, according to StoneX"
+    },
+    {
+      "titulo": "Subvenção dos combustíveis pode deixar herança de R$ 45 bilhões para 2027",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/subvencao-dos-combustiveis-pode-deixar-heranca-de-r-45-bilhoes-para-2027",
+      "tag": "Etanol",
+      "data": "23/11/2026",
+      "titulo_en": "Fuel subsidies could leave a legacy of R$45 billion by 2027"
+    },
+    {
       "titulo": "Brasil e Índia realizam reunião sobre avanços em petróleo, gás natural e biocombustíveis",
       "fonte": "NovaCana",
       "url": "https://www.novacana.com/noticias/brasil-e-india-realizam-reuniao-sobre-avancos-em-petroleo-gas-natural-e-biocombustiveis",
@@ -391,54 +440,6 @@
       "tag": "Etanol",
       "data": "20/11/2026",
       "titulo_en": "The rise of corn ethanol is accelerating cattle feedlot operations in Brazil"
-    },
-    {
-      "titulo": "TCU retira petróleo e gás da lista de alto risco, mas mantém alerta sobre subsídios de energia",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/tcu-retira-petroleo-e-gas-da-lista-de-alto-risco-mas-mantem-alerta-sobre-subsidios-de-energia",
-      "tag": "Brent",
-      "data": "20/11/2026",
-      "titulo_en": "TCU removes oil and gas from the high-risk list, but remains vigilant about energy subsidies"
-    },
-    {
-      "titulo": "Expansão do etanol de milho fortalece preços no Brasil, diz Rabobank",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/expansao-do-etanol-de-milho-fortalece-precos-no-brasil-diz-rabobank",
-      "tag": "Etanol",
-      "data": "19/11/2026",
-      "titulo_en": "Expansion of corn ethanol strengthens prices in Brazil, says Rabobank"
-    },
-    {
-      "titulo": "Suspeita de esquema de fraude fiscal de R$ 1,3 bi no setor de combustíveis é presa em SP",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/suspeita-de-esquema-de-fraude-fiscal-de-r-1-3-bi-no-setor-de-combustiveis-e-presa-em-sp",
-      "tag": "Etanol",
-      "data": "19/11/2026",
-      "titulo_en": "Suspect in R$1.3 billion tax fraud scheme in the fuel sector arrested in São Paulo"
-    },
-    {
-      "titulo": "Câmara aprova crédito de R$ 6,6 bilhões para pagar subvenção aos combustíveis",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/camara-aprova-credito-de-r-6-6-bilhoes-para-pagar-subvencao-aos-combustiveis",
-      "tag": "Etanol",
-      "data": "19/11/2026",
-      "titulo_en": "Congress approves R$6.6 billion in credit to subsidize fuel prices"
-    },
-    {
-      "titulo": "Petróleo fecha em queda com perspectiva de excesso de oferta",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/petroleo-fecha-em-queda-com-perspectiva-de-excesso-de-oferta",
-      "tag": "Brent",
-      "data": "19/11/2026",
-      "titulo_en": "Oil closes down on the prospect of oversupply"
-    },
-    {
-      "titulo": "Produção de etanol dos EUA recua 0,35% na semana, para 1,126 milhão de barris por dia",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/producao-de-etanol-dos-eua-recua-0-35-na-semana-para-1-126-milhao-de-barris-por-dia",
-      "tag": "Etanol",
-      "data": "19/11/2026",
-      "titulo_en": "U.S. ethanol production down 0.35% week-on-week to 1.126 million barrels per day"
     }
   ]
 }
