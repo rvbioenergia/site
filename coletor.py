@@ -304,7 +304,44 @@ def get_etanol_cepea(existing):
     O site oficial cepea.org.br bloqueia scraping automatizado, então usamos o
     espelho público do Notícias Agrícolas, que replica a mesma tabela do CEPEA/ESALQ
     (Fonte: Cepea/Esalq) sem bloqueio."""
-    print("[ETANOL CEPEA] Buscando via espelho Notícias Agrícolas...")
+    # 1) Fonte oficial: página de indicadores do CEPEA (abre no servidor do GitHub; o espelho do
+    #    Notícias Agrícolas passou a responder 403 e deixou o etanol semanal parado).
+    def parse_cepea_oficial():
+        html = fetch_url("https://www.cepea.org.br/br/indicador/etanol.aspx", timeout=30)
+        if not html:
+            return None, None
+        txt = re.sub(r'<[^>]+>', '|', html)
+        txt = re.sub(r'\s+', ' ', txt)
+        txt = re.sub(r'\|(\s*\|)+', '|', txt)
+        linha = re.compile(r'\d{2}\s*-\s*(\d{2}/\d{2}/\d{4})\|(\d+,\d+)\|\d+,\d+\|(-?\d+,\d+)%')
+        def bloco(titulo, fim):
+            i = txt.find(titulo)
+            if i < 0:
+                return None
+            j = txt.find(fim, i + len(titulo)) if fim else -1
+            trecho = txt[i:j] if j > 0 else txt[i:i + 4000]
+            res = [{"data": d, "valor": round(float(v.replace(',', '.')), 4),
+                    "variacao": round(float(var.replace(',', '.')), 2)} for d, v, var in linha.findall(trecho)]
+            return res or None
+        hid_ = bloco('INDICADOR SEMANAL DO ETANOL HIDRATADO', 'INDICADOR SEMANAL DO ETANOL ANIDRO')
+        ani_ = bloco('INDICADOR SEMANAL DO ETANOL ANIDRO', None)
+        return hid_, ani_
+
+    hid, ani = parse_cepea_oficial()
+    if hid and ani:
+        print("[ETANOL CEPEA] Fonte oficial cepea.org.br OK")
+        etanol = {
+            "hidratado": hid[0]["valor"],
+            "hidratado_anterior": hid[1]["valor"] if len(hid) > 1 else hid[0]["valor"],
+            "anidro": ani[0]["valor"],
+            "anidro_anterior": ani[1]["valor"] if len(ani) > 1 else ani[0]["valor"],
+            "semana_fim": hid[0]["data"],
+        }
+        historico = [{"data": h["data"][:5], "valor": h["valor"]} for h in reversed(hid[:5])]
+        print(f"[ETANOL CEPEA] Hidratado R$ {etanol['hidratado']} ({hid[0]['variacao']:+.2f}%) | Anidro R$ {etanol['anidro']} ({ani[0]['variacao']:+.2f}%) | semana até {hid[0]['data']}")
+        return etanol, historico
+
+    print("[ETANOL CEPEA] Fonte oficial indisponível — tentando espelho Notícias Agrícolas...")
 
     padrao = re.compile(
         r'\d{2}\s*-\s*(\d{2}/\d{2}/\d{4})[^0-9]{1,300}?(\d+,\d+)[^0-9+\-]{1,60}?([+\-]?\d+,\d+)',
