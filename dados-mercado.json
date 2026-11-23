@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-23T17:42:07.393889",
+  "atualizado": "2026-11-23T17:47:53.343931",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 71.0,
@@ -9,8 +9,8 @@
     "municipios_pesquisados": 27
   },
   "brent": {
-    "valor": 87.41,
-    "variacao": -5.57,
+    "valor": 87.3,
+    "variacao": -5.69,
     "data": "23/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
@@ -74,7 +74,7 @@
     },
     {
       "data": "23/11",
-      "valor": 87.41
+      "valor": 87.3
     }
   ],
   "estados": [
@@ -317,14 +317,6 @@
       "titulo_en": "ICMS on diesel has risen by 735.7% since 2002"
     },
     {
-      "titulo": "Preço do ovo volta a subir, mas demanda pode esfriar, diz Cepea",
-      "fonte": "Canal Rural",
-      "url": "https://www.canalrural.com.br/aves-e-suinos/preco-do-ovo-volta-a-subir-mas-demanda-pode-esfriar-diz-cepea/",
-      "tag": "Etanol",
-      "data": "23/11/2026",
-      "titulo_en": "Egg prices are rising again, but demand may cool off, says Cepea"
-    },
-    {
       "titulo": "Em sessão volátil, petróleo fecha em alta apesar de fluxo maior em Ormuz",
       "fonte": "NovaCana",
       "url": "https://www.novacana.com/noticias/em-sessao-volatil-petroleo-fecha-em-alta-apesar-de-fluxo-maior-em-ormuz",
@@ -341,20 +333,20 @@
       "titulo_en": "Fuel subsidies could leave a legacy of R$45 billion by 2027"
     },
     {
+      "titulo": "Batatais e Cevasa ampliam moagem em 5,4%, mas receita cai 30,5% no 1º semestre da safra",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/batatais-e-cevasa-ampliam-moagem-em-5-4-mas-receita-cai-30-5-no-1-semestre-da-safra",
+      "tag": "Produção",
+      "data": "23/11/2026",
+      "titulo_en": "Batatais and Cevasa increase milling by 5.4%, but revenue falls by 30.5% in the first half of the harvest"
+    },
+    {
       "titulo": "Iranianos atacam dois navios petroleiros no estreito de ormuz mas não intrerrompe tráfego de petróleo",
       "fonte": "Petronotícias",
       "url": "https://petronoticias.com.br/iranianos-atacam-dois-navios-petroleiros-no-estreito-de-ormuz-mas-nao-intrerrompe-trafego-de-petroleo/",
       "tag": "Brent",
       "data": "21/11/2026",
       "titulo_en": "Iranians attack two oil tankers in the Strait of Hormuz, but oil traffic is not interrupted"
-    },
-    {
-      "titulo": "Brasol assume operação e manutenção de 49,2 mwp em usinas solares do fundo snel11",
-      "fonte": "Petronotícias",
-      "url": "https://petronoticias.com.br/brasol-assume-operacao-e-manutencao-de-492-mwp-em-usinas-solares-do-fundo-snel11/",
-      "tag": "Produção",
-      "data": "21/11/2026",
-      "titulo_en": "Brasol takes over operation and maintenance of 49.2 MWp at solar plants owned by the SNEL11 fund"
     },
     {
       "titulo": "Petróleo fecha perto da estabilidade com atenção dividida entre risco no Irã e oferta",
@@ -379,6 +371,14 @@
       "tag": "Brent",
       "data": "19/11/2026",
       "titulo_en": "Xi, Trump, and Putin pledge to increase the supply of petroleum products and discuss nuclear risks"
+    },
+    {
+      "titulo": "Fim da 6×1: as usinas estão preparadas para pagar essa conta?",
+      "fonte": "JornalCana",
+      "url": "https://jornalcana.com.br/administracao/recursos-humanos/fim-da-6x1-as-usinas-estao-preparadas-para-pagar-essa-conta/",
+      "tag": "Produção",
+      "data": "19/11/2026",
+      "titulo_en": "End of 6×1: Are mills prepared to pay this bill?"
     }
   ]
 }
