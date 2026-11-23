@@ -46,13 +46,15 @@ if nots:
     mais_nova = min((idade(x.get('data')) for x in nots if idade(x.get('data')) is not None), default=None)
     if mais_nova is None or mais_nova > 5: problemas.append("Notícias sem nenhuma publicação nos últimos 5 dias.")
 
-# 3) ANP: aviso (não derruba o site; só afeta a exclusão de capitais sem preço)
-per = ((d.get('anp_ultima') or {}).get('periodo') or (d.get('diagnostico_anp') or {}).get('periodo') or '')
-m = re.findall(r'\d{2}/\d{2}/\d{4}', per)
-if not m: avisos.append("ANP: período da Síntese Semanal não identificado.")
+# 3) ANP (plano B via data da última coleta por capital): aviso, não derruba o site
+cc = (d.get('diagnostico_anp') or {}).get('coleta_capitais') or {}
+if not cc:
+    avisos.append("ANP: verificação de data de coleta por capital não rodou.")
 else:
-    i = idade(m[-1])
-    if i is not None and i > 21: avisos.append(f"ANP: última Síntese Semanal lida é de {m[-1]} ({i} dias).")
+    nd = [u for u, v in cc.items() if v == 'n/d']
+    vel = [u for u, v in cc.items() if v != 'n/d' and (idade(v) or 0) > 14]
+    if len(nd) > 13: avisos.append(f"ANP: não consegui conferir a data de coleta de {len(nd)}/27 capitais.")
+    if vel: avisos.append(f"ANP: capitais com coleta antiga (excluídas da média): {', '.join(sorted(vel))}.")
 
 # 4) site no ar e igual ao repositório
 try:

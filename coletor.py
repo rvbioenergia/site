@@ -277,6 +277,20 @@ def get_pln_diario(existing):
         'fonte': 'CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)',
     }
 
+def _coleta_numerando(slug):
+    """Plano B para a ANP: o Numerando informa a data da última coleta da ANP por cidade.
+    Retorna a data (date) ou None se a página não puder ser lida."""
+    txt = fetch_url(f"https://numerando.com.br/combustiveis/cidade/{slug}", timeout=15)
+    if not txt:
+        return None
+    m = re.search(r'[úu]ltima coleta em\s*(\d{2}/\d{2}/\d{4})', txt)
+    if not m:
+        return None
+    try:
+        return datetime.strptime(m.group(1), '%d/%m/%Y').date()
+    except Exception:
+        return None
+
 def get_paridade_capitais(existing):
     """Busca preço de etanol/gasolina e paridade nas 27 capitais das UFs.
     Fonte: CombustívelBR (combustivelbr.com.br), que processa e publica os dados
@@ -294,6 +308,12 @@ def get_paridade_capitais(existing):
     for uf, nome, slug in CAPITAIS_UF:
         if uf in sem_preco:
             print(f"[PARIDADE CAPITAIS] {nome}: sem preço na ANP nesta semana — excluída")
+            continue
+        # Plano B (ANP inacessível pelo robô): descarta capital cuja última coleta tem mais de 14 dias
+        col = _coleta_numerando(slug)
+        DIAG_ANP.setdefault('coleta_capitais', {})[uf] = col.strftime('%d/%m/%Y') if col else 'n/d'
+        if col and (datetime.now().date() - col).days > 14:
+            print(f"[PARIDADE CAPITAIS] {nome}: última coleta ANP em {col:%d/%m/%Y} (>14 dias) — excluída")
             continue
         url = f"https://combustivelbr.com.br/cidade/{slug}"
         content = fetch_url(url, timeout=15)
