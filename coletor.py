@@ -167,25 +167,42 @@ def _capitais_sem_preco_anp(texto):
 
 DIAG_PLN = {}
 DIAG_ANP = {}
+ANP_INFO = {}   # edição lida, período e capitais sem preço (persistido no JSON como anp_ultima)
 
-def get_capitais_sem_preco_anp():
+ANP_BASE = "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/arq-sintese-semanal/2026/"
+
+def _anp_nomes(ed):
+    """A ANP não é consistente no nome do arquivo (sintese-precos-45.pdf, sinteseprecos20.pdf,
+    sintese-precos-n46.pdf...). Tentamos as variantes conhecidas."""
+    nomes = [f"sintese-precos-{ed}.pdf", f"sinteseprecos{ed}.pdf", f"sintese-precos-{ed:02d}.pdf",
+             f"sinteseprecos{ed:02d}.pdf", f"sintese-precos-n{ed}.pdf", f"sintese-precos-n{ed:02d}.pdf"]
+    return list(dict.fromkeys(nomes))
+
+def get_capitais_sem_preco_anp(existing=None):
     """Baixa a edição mais recente da Síntese Semanal de Preços da ANP e identifica capitais sem preço
     na semana (ex.: Macapá '-'), para não misturar valores antigos de terceiros com a semana atual.
-    Falha segura: se algo der errado, não exclui nada (comportamento anterior)."""
+    Plano B em camadas: (1) variantes do nome do arquivo, 4 edições para trás; (2) se nada for lido,
+    reaproveita o último resultado bom (até 21 dias); (3) senão, não exclui nada (falha segura).
+    O estado fica em ANP_INFO e é gravado no JSON (anp_ultima) para o monitoramento."""
     import subprocess, tempfile, os
     try:
         # Edição 41 = semana encerrada em 10/10/2026; uma por semana.
         ed_max = 41 + (datetime.now().date() - datetime(2026, 10, 10).date()).days // 7
-        for ed in range(ed_max, ed_max - 3, -1):
-            url = f"https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/arq-sintese-semanal/2026/sintese-precos-{ed}.pdf"
-            try:
-                req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; RVBioenergia/1.0)'})
-                dados = urllib.request.urlopen(req, timeout=30).read()
-            except Exception as e:
-                DIAG_ANP[f'ed{ed}'] = f'download falhou: {str(e)[:80]}'
-                continue
-            if not dados.startswith(b'%PDF'):
-                DIAG_ANP[f'ed{ed}'] = 'resposta não é PDF'
+        for ed in range(ed_max, ed_max - 4, -1):
+            dados = None
+            for nome in _anp_nomes(ed):
+                try:
+                    req = urllib.request.Request(ANP_BASE + nome, headers={'User-Agent': 'Mozilla/5.0 (compatible; RVBioenergia/1.0)'})
+                    cand = urllib.request.urlopen(req, timeout=30).read()
+                except Exception as e:
+                    DIAG_ANP[f'ed{ed}'] = f'download falhou ({nome}): {str(e)[:60]}'
+                    continue
+                if cand.startswith(b'%PDF'):
+                    dados = cand
+                    DIAG_ANP[f'ed{ed}_arquivo'] = nome
+                    break
+                DIAG_ANP[f'ed{ed}'] = f'resposta não é PDF ({nome})'
+            if dados is None:
                 continue
             with tempfile.TemporaryDirectory() as tmp:
                 pdf = os.path.join(tmp, 's.pdf')
@@ -200,20 +217,35 @@ def get_capitais_sem_preco_anp():
                         import pypdf
                     txt = '\n'.join((p.extract_text() or '') for p in pypdf.PdfReader(pdf).pages)
             sem = _capitais_sem_preco_anp(txt)
+            periodo = 'não encontrado'
             try:
                 per = re.search(r'(\d{2}/\d{2}/\d{4})\s*(?:a|à|-|–)\s*(\d{2}/\d{2}/\d{4})', txt)
-                DIAG_ANP['periodo'] = per.group(0) if per else 'não encontrado'
+                if per:
+                    periodo = per.group(0)
+                DIAG_ANP['periodo'] = periodo
                 linhas_txt = [l.strip() for l in txt.splitlines()]
                 for cap in ('São Paulo','Belo Horizonte','Rio de Janeiro','Curitiba','Porto Alegre','Salvador','Goiânia','Brasília','Florianópolis','Recife'):
                     DIAG_ANP['linhas_'+cap] = [l[:90] for l in linhas_txt if l.startswith(cap)][:4]
             except Exception as e:
                 DIAG_ANP['erro_linhas'] = str(e)[:80]
             DIAG_ANP[f'ed{ed}'] = f'ok, {len(txt)} chars; sem preço: {sorted(sem)}; trecho Macapá: ' + ' | '.join(l.strip()[:60] for l in txt.splitlines() if 'Macap' in l)[:200]
-            print(f"[ANP] Edição {ed}: capitais sem preço na semana: {sorted(sem) or 'nenhuma'}")
+            ANP_INFO.update({"edicao": ed, "periodo": periodo, "sem_preco": sorted(sem), "lido_em": datetime.now().isoformat()})
+            print(f"[ANP] Edição {ed} ({periodo}): capitais sem preço na semana: {sorted(sem) or 'nenhuma'}")
             return sem
+        DIAG_ANP['aviso'] = f'nenhuma das edições {ed_max}..{ed_max-3} pôde ser lida'
     except Exception as e:
         DIAG_ANP['erro'] = str(e)[:120]
         print(f"[ANP] Verificação indisponível: {e}")
+    # Plano B: último resultado bom (até 21 dias)
+    ult = (existing or {}).get('anp_ultima')
+    try:
+        if ult and (datetime.now() - datetime.fromisoformat(ult['lido_em'])).days <= 21:
+            ANP_INFO.update(ult)
+            DIAG_ANP['plano_b'] = f"reaproveitado resultado da edição {ult.get('edicao')} ({ult.get('periodo')})"
+            print(f"[ANP] Plano B: reaproveitando edição {ult.get('edicao')}")
+            return set(ult.get('sem_preco', []))
+    except Exception:
+        pass
     return set()
 
 def get_pln_diario(existing):
@@ -258,7 +290,7 @@ def get_paridade_capitais(existing):
 
     estados = []
     falhas = 0
-    sem_preco = get_capitais_sem_preco_anp()
+    sem_preco = get_capitais_sem_preco_anp(existing)
     for uf, nome, slug in CAPITAIS_UF:
         if uf in sem_preco:
             print(f"[PARIDADE CAPITAIS] {nome}: sem preço na ANP nesta semana — excluída")
@@ -609,6 +641,7 @@ def main():
         "historico_brent": hist_brent,
         "estados": estados,
         "pln_diario": pln_diario,
+        "anp_ultima": ANP_INFO or existing.get('anp_ultima'),
         "diagnostico_anp": DIAG_ANP,
         "diagnostico_pln": DIAG_PLN,
         "noticias": noticias

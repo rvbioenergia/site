@@ -1,0 +1,16 @@
+name: Verificar Saúde do Site
+on:
+  schedule:
+    - cron: '30 14 * * 1-5'   # 11:30 Brasília, depois do robô de dados
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  saude:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/saude.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
