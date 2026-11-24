@@ -1,17 +1,17 @@
 {
-  "atualizado": "2026-11-23T18:07:34.347951",
+  "atualizado": "2026-11-24T11:52:22.504955",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
-    "paridade": 70.4,
-    "etanol_medio": 4.69,
-    "gasolina_media": 6.66,
+    "paridade": 70.7,
+    "etanol_medio": 4.68,
+    "gasolina_media": 6.62,
     "municipios_vantajosos": 11,
     "municipios_pesquisados": 26
   },
   "brent": {
-    "valor": 87.35,
-    "variacao": -5.64,
-    "data": "23/11/2026",
+    "valor": 86.94,
+    "variacao": -2.72,
+    "data": "24/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
@@ -45,182 +45,182 @@
   ],
   "historico_brent": [
     {
-      "data": "04/10",
-      "valor": 100.32
+      "data": "05/10",
+      "valor": 100.58
     },
     {
-      "data": "11/10",
-      "valor": 106.65
+      "data": "12/10",
+      "valor": 105.69
     },
     {
-      "data": "18/10",
-      "valor": 109.55
+      "data": "19/10",
+      "valor": 108.79
     },
     {
-      "data": "25/10",
-      "valor": 115.81
+      "data": "26/10",
+      "valor": 113.88
     },
     {
-      "data": "02/11",
-      "valor": 104.77
+      "data": "03/11",
+      "valor": 103.6
     },
     {
-      "data": "09/11",
-      "valor": 92.57
+      "data": "10/11",
+      "valor": 91.49
     },
     {
-      "data": "16/11",
-      "valor": 92.44
+      "data": "17/11",
+      "valor": 93.14
     },
     {
-      "data": "23/11",
-      "valor": 87.35
+      "data": "24/11",
+      "valor": 86.94
     }
   ],
   "estados": [
     {
       "uf": "AC",
       "nome": "Acre",
-      "etanol": 4.82,
-      "gasolina": 7.26
+      "etanol": 4.8,
+      "gasolina": 7.23
     },
     {
       "uf": "AL",
       "nome": "Alagoas",
       "etanol": 4.9,
-      "gasolina": 6.59
+      "gasolina": 6.61
     },
     {
       "uf": "AM",
       "nome": "Amazonas",
-      "etanol": 4.96,
-      "gasolina": 6.89
+      "etanol": 4.82,
+      "gasolina": 6.52
     },
     {
       "uf": "BA",
       "nome": "Bahia",
-      "etanol": 4.69,
-      "gasolina": 6.55
+      "etanol": 4.58,
+      "gasolina": 6.42
     },
     {
       "uf": "CE",
       "nome": "Ceará",
       "etanol": 4.92,
-      "gasolina": 6.97
+      "gasolina": 6.96
     },
     {
       "uf": "DF",
       "nome": "Distrito Federal",
-      "etanol": 4.5,
-      "gasolina": 6.55
+      "etanol": 4.48,
+      "gasolina": 6.54
     },
     {
       "uf": "ES",
       "nome": "Espírito Santo",
-      "etanol": 4.74,
-      "gasolina": 6.19
+      "etanol": 4.83,
+      "gasolina": 6.22
     },
     {
       "uf": "GO",
       "nome": "Goiás",
-      "etanol": 4.42,
-      "gasolina": 6.69
+      "etanol": 4.47,
+      "gasolina": 6.74
     },
     {
       "uf": "MA",
       "nome": "Maranhão",
-      "etanol": 4.7,
-      "gasolina": 6.28
+      "etanol": 4.72,
+      "gasolina": 6.19
     },
     {
       "uf": "MT",
       "nome": "Mato Grosso",
-      "etanol": 4.26,
-      "gasolina": 6.93
+      "etanol": 4.23,
+      "gasolina": 6.89
     },
     {
       "uf": "MS",
       "nome": "Mato Grosso do Sul",
-      "etanol": 3.98,
+      "etanol": 3.96,
       "gasolina": 6.25
     },
     {
       "uf": "MG",
       "nome": "Minas Gerais",
-      "etanol": 4.5,
-      "gasolina": 6.5
+      "etanol": 4.65,
+      "gasolina": 6.49
     },
     {
       "uf": "PA",
       "nome": "Pará",
-      "etanol": 4.37,
-      "gasolina": 6.47
+      "etanol": 4.36,
+      "gasolina": 6.37
     },
     {
       "uf": "PB",
       "nome": "Paraíba",
-      "etanol": 4.35,
-      "gasolina": 6.21
+      "etanol": 4.31,
+      "gasolina": 6.2
     },
     {
       "uf": "PR",
       "nome": "Paraná",
-      "etanol": 4.62,
-      "gasolina": 6.73
+      "etanol": 4.63,
+      "gasolina": 6.74
     },
     {
       "uf": "PE",
       "nome": "Pernambuco",
-      "etanol": 4.75,
-      "gasolina": 6.81
+      "etanol": 4.68,
+      "gasolina": 6.77
     },
     {
       "uf": "PI",
       "nome": "Piauí",
-      "etanol": 4.84,
-      "gasolina": 6.69
+      "etanol": 4.76,
+      "gasolina": 6.65
     },
     {
       "uf": "RJ",
       "nome": "Rio de Janeiro",
-      "etanol": 4.83,
+      "etanol": 4.82,
       "gasolina": 6.5
     },
     {
       "uf": "RN",
       "nome": "Rio Grande do Norte",
-      "etanol": 4.83,
-      "gasolina": 6.41
+      "etanol": 4.73,
+      "gasolina": 6.23
     },
     {
       "uf": "RS",
       "nome": "Rio Grande do Sul",
-      "etanol": 4.57,
-      "gasolina": 5.91
+      "etanol": 4.62,
+      "gasolina": 5.87
     },
     {
       "uf": "RO",
       "nome": "Rondônia",
-      "etanol": 5.07,
-      "gasolina": 7.5
+      "etanol": 5.05,
+      "gasolina": 7.47
     },
     {
       "uf": "RR",
       "nome": "Roraima",
-      "etanol": 5.38,
+      "etanol": 5.37,
       "gasolina": 7.57
     },
     {
       "uf": "SC",
       "nome": "Santa Catarina",
-      "etanol": 4.61,
-      "gasolina": 6.41
+      "etanol": 4.64,
+      "gasolina": 6.38
     },
     {
       "uf": "SP",
       "nome": "São Paulo",
-      "etanol": 4.09,
-      "gasolina": 6.34
+      "etanol": 4.14,
+      "gasolina": 6.35
     },
     {
       "uf": "SE",
@@ -231,21 +231,17 @@
     {
       "uf": "TO",
       "nome": "Tocantins",
-      "etanol": 5.01,
-      "gasolina": 6.99
+      "etanol": 5.04,
+      "gasolina": 7.02
     }
   ],
   "pln_diario": {
-    "data": "19/11/2026",
-    "valor_m3": 3083.0,
-    "valor_litro": 3.083,
-    "anterior_litro": 3.0565,
-    "variacao_dia": 0.87,
+    "data": "23/11/2026",
+    "valor_m3": 3087.5,
+    "valor_litro": 3.0875,
+    "anterior_litro": 3.083,
+    "variacao_dia": 0.15,
     "historico": [
-      {
-        "data": "06/11/2026",
-        "valor_litro": 2.9915
-      },
       {
         "data": "09/11/2026",
         "valor_litro": 2.985
@@ -281,6 +277,10 @@
       {
         "data": "19/11/2026",
         "valor_litro": 3.083
+      },
+      {
+        "data": "23/11/2026",
+        "valor_litro": 3.0875
       }
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
@@ -334,12 +334,52 @@
   },
   "noticias": [
     {
-      "titulo": "Disputa sobre transição dos combustíveis fósseis leva COP31 ao fracasso",
+      "titulo": "Com Petrobras como sócia, Cerradinho quer ampliar etanol de milho em cerca de 80%",
       "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/disputa-sobre-transicao-dos-combustiveis-fosseis-leva-cop31-ao-fracasso",
+      "url": "https://www.novacana.com/noticias/com-petrobras-como-socia-cerradinho-quer-ampliar-etanol-de-milho-em-cerca-de-80",
       "tag": "Etanol",
+      "data": "24/11/2026",
+      "titulo_en": "With Petrobras as a partner, Cerradinho aims to increase corn ethanol production by about 80%"
+    },
+    {
+      "titulo": "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz",
+      "fonte": "BiodieselBR",
+      "url": "https://www.biodieselbr.com/noticias/biocombustivel/negocio/petroleo-fecha-em-queda-de-3-e-volta-aos-us-80-com-fluxo-melhor-em-ormuz",
+      "tag": "Brent",
+      "data": "24/11/2026",
+      "titulo_en": "Oil closes down 3% and returns to $80 with improved flow in the Strait of Hormuz"
+    },
+    {
+      "titulo": "Petrobras crava no plano a aposta em diesel, gasolina e etanol",
+      "fonte": "Eixos",
+      "url": "https://eixos.com.br/newsletters/comece-seu-dia/petrobras-crava-no-plano-a-aposta-em-diesel-gasolina-e-etanol/",
+      "tag": "Etanol",
+      "data": "24/11/2026",
+      "titulo_en": "Petrobras sets its sights on diesel, gasoline and ethanol in its plan"
+    },
+    {
+      "titulo": "Petrobras compra 42% da empresa de etanol de milho da CerradinhoBio",
+      "fonte": "JornalCana",
+      "url": "https://jornalcana.com.br/mercado/petrobras-passa-a-deter-42-da-empresa-de-etanol-de-milho-da-cerradinhobio/",
+      "tag": "Etanol",
+      "data": "24/11/2026",
+      "titulo_en": "Petrobras acquires 42% stake in CerradinhoBio's corn ethanol company"
+    },
+    {
+      "titulo": "Petrobras volta ao mercado de etanol com aquisição de fatia da Neomille por R$ 2,8 bilhões",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/petrobras-volta-ao-mercado-de-etanol-com-aquisicao-de-fatia-da-neomille-por-r-2-8-bilhoes",
+      "tag": "Etanol",
+      "data": "24/11/2026",
+      "titulo_en": "Petrobras returns to the ethanol market with the acquisition of a stake in Neomille for R$2.8 billion"
+    },
+    {
+      "titulo": "Petrobrás Anuncia Plano de Negócios de Us$ 122 Bilhões e Meta para Ampliar Produção de Petróleo e Diesel",
+      "fonte": "Petronotícias",
+      "url": "https://petronoticias.com.br/petrobras-anuncia-plano-de-negocios-de-us-122-bilhoes-e-meta-para-ampliar-producao-de-petroleo-e-diesel/",
+      "tag": "Brent",
       "data": "23/11/2026",
-      "titulo_en": "Dispute over transition from fossil fuels leads COP31 to failure"
+      "titulo_en": "Petrobras Announces $122 Billion Business Plan and Target to Increase Oil and Diesel Production"
     },
     {
       "titulo": "ICMS sobre o diesel acumula alta de 735,7% desde 2002",
@@ -350,44 +390,20 @@
       "titulo_en": "ICMS on diesel has risen by 735.7% since 2002"
     },
     {
-      "titulo": "Em sessão volátil, petróleo fecha em alta apesar de fluxo maior em Ormuz",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/em-sessao-volatil-petroleo-fecha-em-alta-apesar-de-fluxo-maior-em-ormuz",
-      "tag": "Brent",
-      "data": "23/11/2026",
-      "titulo_en": "In a volatile session, oil closes higher despite increased flow through the Strait of Hormuz"
-    },
-    {
-      "titulo": "Subvenção dos combustíveis pode deixar herança de R$ 45 bilhões para 2027",
-      "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/subvencao-dos-combustiveis-pode-deixar-heranca-de-r-45-bilhoes-para-2027",
-      "tag": "Biocombustíveis",
-      "data": "23/11/2026",
-      "titulo_en": "Fuel subsidies could leave a legacy of R$45 billion by 2027"
-    },
-    {
-      "titulo": "Batatais e Cevasa ampliam moagem em 5,4%, mas receita cai 30,5% no 1º semestre da safra",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/batatais-e-cevasa-ampliam-moagem-em-5-4-mas-receita-cai-30-5-no-1-semestre-da-safra",
-      "tag": "Produção",
-      "data": "23/11/2026",
-      "titulo_en": "Batatais and Cevasa increase milling by 5.4%, but revenue falls by 30.5% in the first half of the harvest"
-    },
-    {
-      "titulo": "Iranianos atacam dois navios petroleiros no estreito de ormuz mas não intrerrompe tráfego de petróleo",
-      "fonte": "Petronotícias",
-      "url": "https://petronoticias.com.br/iranianos-atacam-dois-navios-petroleiros-no-estreito-de-ormuz-mas-nao-intrerrompe-trafego-de-petroleo/",
-      "tag": "Brent",
-      "data": "21/11/2026",
-      "titulo_en": "Iranians attack two oil tankers in the Strait of Hormuz, but oil traffic is not interrupted"
-    },
-    {
-      "titulo": "Petróleo fecha perto da estabilidade com atenção dividida entre risco no Irã e oferta",
+      "titulo": "Câmara aprova ajuste fiscal sem mudanças e abre caminho para renovar subvenção ao diesel",
       "fonte": "Eixos",
-      "url": "https://eixos.com.br/petroleo-e-gas/petroleo-fecha-perto-da-estabilidade-com-atencao-dividida-entre-risco-no-ira-e-oferta/",
-      "tag": "Brent",
-      "data": "19/11/2026",
-      "titulo_en": "Oil closes near stability with attention divided between risk in Iran and supply"
+      "url": "https://eixos.com.br/combustiveis-e-bioenergia/ajuste-fiscal-na-pauta-da-camara-abre-caminho-para-governo-renovar-subvencao-ao-diesel/",
+      "tag": "Energia",
+      "data": "23/11/2026",
+      "titulo_en": "House of Representatives approves fiscal adjustment without changes, paving the way for renewal of diesel subsidy"
+    },
+    {
+      "titulo": "Petrobrás Oficializa Retorno ao Mercado de Etanol ao Adquirir 42% da Neomille por R$ 2,8 Bilhões",
+      "fonte": "Petronotícias",
+      "url": "https://petronoticias.com.br/petrobras-oficializa-retorno-ao-mercado-de-etanol-ao-adquirir-42-da-neomille-por-r-28-bilhoes/",
+      "tag": "Etanol",
+      "data": "23/11/2026",
+      "titulo_en": "Petrobras Officially Returns to the Ethanol Market by Acquiring 42% of Neomille for R$2.8 Billion"
     },
     {
       "titulo": "Expansão do etanol de milho transforma o mercado brasileiro e fortalece preços no interior",
@@ -396,22 +412,6 @@
       "tag": "Etanol",
       "data": "19/11/2026",
       "titulo_en": "Expansion of corn ethanol transforms the Brazilian market and strengthens prices in the interior"
-    },
-    {
-      "titulo": "Xi, Trump e Putin prometem ampliar oferta de derivados de petróleo e discutir riscos nucleares",
-      "fonte": "Eixos",
-      "url": "https://eixos.com.br/petroleo-e-gas/xi-trump-e-putin-prometem-ampliar-oferta-de-derivados-de-petroleo-e-discutir-riscos-nucleares/",
-      "tag": "Brent",
-      "data": "19/11/2026",
-      "titulo_en": "Xi, Trump, and Putin pledge to increase the supply of petroleum products and discuss nuclear risks"
-    },
-    {
-      "titulo": "Fim da 6×1: as usinas estão preparadas para pagar essa conta?",
-      "fonte": "JornalCana",
-      "url": "https://jornalcana.com.br/administracao/recursos-humanos/fim-da-6x1-as-usinas-estao-preparadas-para-pagar-essa-conta/",
-      "tag": "Produção",
-      "data": "19/11/2026",
-      "titulo_en": "End of 6×1: Are mills prepared to pay this bill?"
     }
   ]
 }
