@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-24T11:52:22.504955",
+  "atualizado": "2026-11-25T11:56:04.243095",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 70.7,
@@ -9,9 +9,9 @@
     "municipios_pesquisados": 26
   },
   "brent": {
-    "valor": 86.94,
-    "variacao": -2.72,
-    "data": "24/11/2026",
+    "valor": 88.25,
+    "variacao": -3.45,
+    "data": "25/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
@@ -45,36 +45,36 @@
   ],
   "historico_brent": [
     {
-      "data": "05/10",
-      "valor": 100.58
+      "data": "06/10",
+      "valor": 100.2
     },
     {
-      "data": "12/10",
-      "valor": 105.69
+      "data": "13/10",
+      "valor": 106.06
     },
     {
-      "data": "19/10",
-      "valor": 108.79
+      "data": "20/10",
+      "valor": 108.82
     },
     {
-      "data": "26/10",
-      "valor": 113.88
+      "data": "27/10",
+      "valor": 115.32
     },
     {
-      "data": "03/11",
-      "valor": 103.6
+      "data": "04/11",
+      "valor": 94.62
     },
     {
-      "data": "10/11",
-      "valor": 91.49
+      "data": "11/11",
+      "valor": 92.76
     },
     {
-      "data": "17/11",
-      "valor": 93.14
+      "data": "18/11",
+      "valor": 91.95
     },
     {
-      "data": "24/11",
-      "valor": 86.94
+      "data": "25/11",
+      "valor": 88.25
     }
   ],
   "estados": [
@@ -236,16 +236,12 @@
     }
   ],
   "pln_diario": {
-    "data": "23/11/2026",
-    "valor_m3": 3087.5,
-    "valor_litro": 3.0875,
-    "anterior_litro": 3.083,
-    "variacao_dia": 0.15,
+    "data": "24/11/2026",
+    "valor_m3": 3084.5,
+    "valor_litro": 3.0845,
+    "anterior_litro": 3.0875,
+    "variacao_dia": -0.1,
     "historico": [
-      {
-        "data": "09/11/2026",
-        "valor_litro": 2.985
-      },
       {
         "data": "10/11/2026",
         "valor_litro": 2.9885
@@ -281,6 +277,10 @@
       {
         "data": "23/11/2026",
         "valor_litro": 3.0875
+      },
+      {
+        "data": "24/11/2026",
+        "valor_litro": 3.0845
       }
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
@@ -334,20 +334,68 @@
   },
   "noticias": [
     {
-      "titulo": "Com Petrobras como sócia, Cerradinho quer ampliar etanol de milho em cerca de 80%",
+      "titulo": "Uisa pede autorização para ampliar moagem de cana em 1 milhão de toneladas",
       "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/com-petrobras-como-socia-cerradinho-quer-ampliar-etanol-de-milho-em-cerca-de-80",
-      "tag": "Etanol",
-      "data": "24/11/2026",
-      "titulo_en": "With Petrobras as a partner, Cerradinho aims to increase corn ethanol production by about 80%"
+      "url": "https://www.novacana.com/noticias/uisa-pede-autorizacao-para-ampliar-moagem-de-cana-em-1-milhao-de-toneladas",
+      "tag": "Produção",
+      "data": "25/11/2026",
+      "titulo_en": "UISA seeks authorization to increase sugarcane crushing by 1 million tons"
     },
     {
-      "titulo": "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz",
+      "titulo": "Petrobras mira em aviação e diesel renovável com retorno ao etanol",
       "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/biocombustivel/negocio/petroleo-fecha-em-queda-de-3-e-volta-aos-us-80-com-fluxo-melhor-em-ormuz",
+      "url": "https://www.biodieselbr.com/noticias/biocombustivel/geracao/petrobras-mira-em-aviacao-e-diesel-renovavel-com-retorno-ao-etanol",
+      "tag": "Etanol",
+      "data": "25/11/2026",
+      "titulo_en": "Petrobras targets aviation and renewable diesel with a return to ethanol"
+    },
+    {
+      "titulo": "Ajuste fiscal abre espaço para renovar subvenção do diesel",
+      "fonte": "Eixos",
+      "url": "https://eixos.com.br/newsletters/comece-seu-dia/ajuste-fiscal-abre-espaco-para-renovar-subvencao-do-diesel/",
+      "tag": "Energia",
+      "data": "25/11/2026",
+      "titulo_en": "Fiscal adjustment opens the way for renewal of the diesel subsidy"
+    },
+    {
+      "titulo": "Com mix alcooleiro, moagem da safra de cana 2026-2027do Norte-Nordeste se aproxima de 40% do previsto",
+      "fonte": "JornalCana",
+      "url": "https://jornalcana.com.br/mercado/com-mix-alcooleiro-moagem-da-safra-de-cana-2026-2027do-norte-nordeste-se-aproxima-de-40-do-previsto/",
+      "tag": "Produção",
+      "data": "25/11/2026",
+      "titulo_en": "With an alcohol mix, the crushing of the 2026-2027 sugarcane harvest in the North and Northeast is approaching 40% of the forecast"
+    },
+    {
+      "titulo": "Petrobras mira em aviação e diesel renovável com retorno ao etanol",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/petrobras-mira-em-aviacao-e-diesel-renovavel-com-retorno-ao-etanol",
+      "tag": "Etanol",
+      "data": "25/11/2026",
+      "titulo_en": "Petrobras targets aviation and renewable diesel with a return to ethanol"
+    },
+    {
+      "titulo": "Texto de ajuste fiscal exclui da meta até R$ 10,5 bilhões em subvenção ao diesel",
+      "fonte": "BiodieselBR",
+      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/texto-de-ajuste-fiscal-exclui-da-meta-ate-r-10-5-bilhoes-em-subvencao-ao-diesel",
+      "tag": "Biocombustíveis",
+      "data": "25/11/2026",
+      "titulo_en": "Fiscal adjustment bill excludes up to R$10.5 billion in diesel subsidies from the target"
+    },
+    {
+      "titulo": "Peru se prepara para promover o consumo de etanol",
+      "fonte": "JornalCana",
+      "url": "https://jornalcana.com.br/industria/etanol/peru-se-prepara-para-promover-o-consumo-de-etanol/",
+      "tag": "Etanol",
+      "data": "25/11/2026",
+      "titulo_en": "Peru prepares to promote ethanol consumption"
+    },
+    {
+      "titulo": "Há Poucos Dias da Realização da Prova de Fórmula 1 no País, o Bahrein Acusa Teerã de Ataques Contra as Bases Americanas",
+      "fonte": "Petronotícias",
+      "url": "https://petronoticias.com.br/ha-poucos-dias-da-realizacao-da-prova-de-formula-1-no-pais-o-bahrain-acusa-teera-de-ataques-contra-as-bases-americanas/",
       "tag": "Brent",
       "data": "24/11/2026",
-      "titulo_en": "Oil closes down 3% and returns to $80 with improved flow in the Strait of Hormuz"
+      "titulo_en": "With Just a Few Days to Go Until the Formula 1 Race in the Country, Bahrain Accuses Tehran of Attacks on US Bases"
     },
     {
       "titulo": "Petrobras crava no plano a aposta em diesel, gasolina e etanol",
@@ -358,60 +406,12 @@
       "titulo_en": "Petrobras sets its sights on diesel, gasoline and ethanol in its plan"
     },
     {
-      "titulo": "Petrobras compra 42% da empresa de etanol de milho da CerradinhoBio",
-      "fonte": "JornalCana",
-      "url": "https://jornalcana.com.br/mercado/petrobras-passa-a-deter-42-da-empresa-de-etanol-de-milho-da-cerradinhobio/",
-      "tag": "Etanol",
-      "data": "24/11/2026",
-      "titulo_en": "Petrobras acquires 42% stake in CerradinhoBio's corn ethanol company"
-    },
-    {
-      "titulo": "Petrobras volta ao mercado de etanol com aquisição de fatia da Neomille por R$ 2,8 bilhões",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/petrobras-volta-ao-mercado-de-etanol-com-aquisicao-de-fatia-da-neomille-por-r-2-8-bilhoes",
-      "tag": "Etanol",
-      "data": "24/11/2026",
-      "titulo_en": "Petrobras returns to the ethanol market with the acquisition of a stake in Neomille for R$2.8 billion"
-    },
-    {
       "titulo": "Petrobrás Anuncia Plano de Negócios de Us$ 122 Bilhões e Meta para Ampliar Produção de Petróleo e Diesel",
       "fonte": "Petronotícias",
       "url": "https://petronoticias.com.br/petrobras-anuncia-plano-de-negocios-de-us-122-bilhoes-e-meta-para-ampliar-producao-de-petroleo-e-diesel/",
       "tag": "Brent",
       "data": "23/11/2026",
       "titulo_en": "Petrobras Announces $122 Billion Business Plan and Target to Increase Oil and Diesel Production"
-    },
-    {
-      "titulo": "ICMS sobre o diesel acumula alta de 735,7% desde 2002",
-      "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/regulacao/impostos/icms-sobre-o-diesel-acumula-alta-de-735-7-desde-2002",
-      "tag": "Biocombustíveis",
-      "data": "23/11/2026",
-      "titulo_en": "ICMS on diesel has risen by 735.7% since 2002"
-    },
-    {
-      "titulo": "Câmara aprova ajuste fiscal sem mudanças e abre caminho para renovar subvenção ao diesel",
-      "fonte": "Eixos",
-      "url": "https://eixos.com.br/combustiveis-e-bioenergia/ajuste-fiscal-na-pauta-da-camara-abre-caminho-para-governo-renovar-subvencao-ao-diesel/",
-      "tag": "Energia",
-      "data": "23/11/2026",
-      "titulo_en": "House of Representatives approves fiscal adjustment without changes, paving the way for renewal of diesel subsidy"
-    },
-    {
-      "titulo": "Petrobrás Oficializa Retorno ao Mercado de Etanol ao Adquirir 42% da Neomille por R$ 2,8 Bilhões",
-      "fonte": "Petronotícias",
-      "url": "https://petronoticias.com.br/petrobras-oficializa-retorno-ao-mercado-de-etanol-ao-adquirir-42-da-neomille-por-r-28-bilhoes/",
-      "tag": "Etanol",
-      "data": "23/11/2026",
-      "titulo_en": "Petrobras Officially Returns to the Ethanol Market by Acquiring 42% of Neomille for R$2.8 Billion"
-    },
-    {
-      "titulo": "Expansão do etanol de milho transforma o mercado brasileiro e fortalece preços no interior",
-      "fonte": "JornalCana",
-      "url": "https://jornalcana.com.br/mercado/expansao-do-etanol-de-milho-transforma-o-mercado-brasileiro-e-fortalece-precos-no-interior/",
-      "tag": "Etanol",
-      "data": "19/11/2026",
-      "titulo_en": "Expansion of corn ethanol transforms the Brazilian market and strengthens prices in the interior"
     }
   ]
 }
