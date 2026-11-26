@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-25T11:56:04.243095",
+  "atualizado": "2026-11-26T11:55:04.525633",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 70.7,
@@ -9,9 +9,9 @@
     "municipios_pesquisados": 26
   },
   "brent": {
-    "valor": 88.25,
-    "variacao": -3.45,
-    "data": "25/11/2026",
+    "valor": 91.3,
+    "variacao": -3.5,
+    "data": "26/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
@@ -45,36 +45,36 @@
   ],
   "historico_brent": [
     {
-      "data": "06/10",
-      "valor": 100.2
+      "data": "07/10",
+      "valor": 104.28
     },
     {
-      "data": "13/10",
-      "valor": 106.06
+      "data": "14/10",
+      "valor": 105.92
     },
     {
-      "data": "20/10",
-      "valor": 108.82
+      "data": "21/10",
+      "valor": 113.17
     },
     {
-      "data": "27/10",
-      "valor": 115.32
+      "data": "28/10",
+      "valor": 114.88
     },
     {
-      "data": "04/11",
-      "valor": 94.62
+      "data": "05/11",
+      "valor": 98.29
     },
     {
-      "data": "11/11",
-      "valor": 92.76
+      "data": "12/11",
+      "valor": 95.82
     },
     {
-      "data": "18/11",
-      "valor": 91.95
+      "data": "19/11",
+      "valor": 91.98
     },
     {
-      "data": "25/11",
-      "valor": 88.25
+      "data": "26/11",
+      "valor": 91.3
     }
   ],
   "estados": [
@@ -236,16 +236,12 @@
     }
   ],
   "pln_diario": {
-    "data": "24/11/2026",
-    "valor_m3": 3084.5,
-    "valor_litro": 3.0845,
-    "anterior_litro": 3.0875,
-    "variacao_dia": -0.1,
+    "data": "25/11/2026",
+    "valor_m3": 3083.5,
+    "valor_litro": 3.0835,
+    "anterior_litro": 3.0845,
+    "variacao_dia": -0.03,
     "historico": [
-      {
-        "data": "10/11/2026",
-        "valor_litro": 2.9885
-      },
       {
         "data": "11/11/2026",
         "valor_litro": 3.0155
@@ -281,6 +277,10 @@
       {
         "data": "24/11/2026",
         "valor_litro": 3.0845
+      },
+      {
+        "data": "25/11/2026",
+        "valor_litro": 3.0835
       }
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
@@ -334,20 +334,44 @@
   },
   "noticias": [
     {
-      "titulo": "Uisa pede autorização para ampliar moagem de cana em 1 milhão de toneladas",
+      "titulo": "Governo vai prorrogar subvenção de R$ 2,12 do diesel por 30 dias, diz Moretti",
       "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/uisa-pede-autorizacao-para-ampliar-moagem-de-cana-em-1-milhao-de-toneladas",
-      "tag": "Produção",
-      "data": "25/11/2026",
-      "titulo_en": "UISA seeks authorization to increase sugarcane crushing by 1 million tons"
+      "url": "https://www.novacana.com/noticias/governo-vai-prorrogar-subvencao-de-r-2-12-do-diesel-por-30-dias-diz-moretti",
+      "tag": "Etanol",
+      "data": "26/11/2026",
+      "titulo_en": "Government to extend R$2.12 diesel subsidy for 30 days, says Moretti"
     },
     {
-      "titulo": "Petrobras mira em aviação e diesel renovável com retorno ao etanol",
+      "titulo": "Governo vai prorrogar subvenção de R$ 2,12 do diesel por 30 dias, diz Moretti",
       "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/biocombustivel/geracao/petrobras-mira-em-aviacao-e-diesel-renovavel-com-retorno-ao-etanol",
+      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/governo-vai-prorrogar-subvencao-de-r-2-12-do-diesel-por-30-dias-diz-moretti",
+      "tag": "Biocombustíveis",
+      "data": "26/11/2026",
+      "titulo_en": "Government to extend R$2.12 diesel subsidy for 30 days, says Moretti"
+    },
+    {
+      "titulo": "Universidade da Paraíba deposita pedidos de patentes de tecnologias para análise de etanol e de pellets",
+      "fonte": "JornalCana",
+      "url": "https://jornalcana.com.br/mercado/universidade-da-paraiba-deposita-pedidos-de-patentes-de-tecnologias-para-analise-de-etanol-e-de-pellets/",
       "tag": "Etanol",
-      "data": "25/11/2026",
-      "titulo_en": "Petrobras targets aviation and renewable diesel with a return to ethanol"
+      "data": "26/11/2026",
+      "titulo_en": "University of Paraíba files patent applications for ethanol and pellet analysis technologies"
+    },
+    {
+      "titulo": "Protestos na Bolívia contra aumento do diesel deixam pelo menos 16 detidos",
+      "fonte": "NovaCana",
+      "url": "https://www.novacana.com/noticias/protestos-na-bolivia-contra-aumento-do-diesel-deixam-pelo-menos-16-detidos",
+      "tag": "Etanol",
+      "data": "26/11/2026",
+      "titulo_en": "Protests in Bolivia against diesel price hike leave at least 16 people detained"
+    },
+    {
+      "titulo": "Protestos na Bolívia contra aumento do diesel deixam pelo menos 16 detidos",
+      "fonte": "BiodieselBR",
+      "url": "https://www.biodieselbr.com/noticias/inter/out/protestos-na-bolivia-contra-aumento-do-diesel-deixam-pelo-menos-16-detidos",
+      "tag": "Biocombustíveis",
+      "data": "26/11/2026",
+      "titulo_en": "Protests in Bolivia against diesel price hike leave at least 16 people detained"
     },
     {
       "titulo": "Ajuste fiscal abre espaço para renovar subvenção do diesel",
@@ -358,6 +382,14 @@
       "titulo_en": "Fiscal adjustment opens the way for renewal of the diesel subsidy"
     },
     {
+      "titulo": "O BRASIL SERÁ A SEDE DA 8ª CONFERÊNCIA MUNDIAL DOS TRANSPORTES AÉREOS QUE CONCLUIU SEU ENCONTRO NO CANADÁ COM ALGUMAS OR",
+      "fonte": "Petronotícias",
+      "url": "https://petronoticias.com.br/o-brasil-sera-a-sede-da-8a-conferencia-mundial-dos-transportes-aereos-que-concluiu-seu-encontro-no-canada-com-algumas-orientacoes-para-o-setor/",
+      "tag": "Brent",
+      "data": "25/11/2026",
+      "titulo_en": "BRAZIL WILL HOST THE 8TH WORLD AIR TRANSPORT CONFERENCE, WHICH CONCLUDED ITS MEETING IN CANADA WITH SOME [text cut off]"
+    },
+    {
       "titulo": "Com mix alcooleiro, moagem da safra de cana 2026-2027do Norte-Nordeste se aproxima de 40% do previsto",
       "fonte": "JornalCana",
       "url": "https://jornalcana.com.br/mercado/com-mix-alcooleiro-moagem-da-safra-de-cana-2026-2027do-norte-nordeste-se-aproxima-de-40-do-previsto/",
@@ -366,28 +398,12 @@
       "titulo_en": "With an alcohol mix, the crushing of the 2026-2027 sugarcane harvest in the North and Northeast is approaching 40% of the forecast"
     },
     {
-      "titulo": "Petrobras mira em aviação e diesel renovável com retorno ao etanol",
-      "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/petrobras-mira-em-aviacao-e-diesel-renovavel-com-retorno-ao-etanol",
-      "tag": "Etanol",
+      "titulo": "Petróleo fecha em alta com tensões entre Houthis e Arábia Saudita e ataques da Ucrânia",
+      "fonte": "Eixos",
+      "url": "https://eixos.com.br/petroleo-e-gas/petroleo-fecha-em-alta-com-tensoes-entre-houthis-e-arabia-saudita-e-ataques-da-ucrania/",
+      "tag": "Brent",
       "data": "25/11/2026",
-      "titulo_en": "Petrobras targets aviation and renewable diesel with a return to ethanol"
-    },
-    {
-      "titulo": "Texto de ajuste fiscal exclui da meta até R$ 10,5 bilhões em subvenção ao diesel",
-      "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/texto-de-ajuste-fiscal-exclui-da-meta-ate-r-10-5-bilhoes-em-subvencao-ao-diesel",
-      "tag": "Biocombustíveis",
-      "data": "25/11/2026",
-      "titulo_en": "Fiscal adjustment bill excludes up to R$10.5 billion in diesel subsidies from the target"
-    },
-    {
-      "titulo": "Peru se prepara para promover o consumo de etanol",
-      "fonte": "JornalCana",
-      "url": "https://jornalcana.com.br/industria/etanol/peru-se-prepara-para-promover-o-consumo-de-etanol/",
-      "tag": "Etanol",
-      "data": "25/11/2026",
-      "titulo_en": "Peru prepares to promote ethanol consumption"
+      "titulo_en": "Oil closes higher amid tensions between the Houthis and Saudi Arabia and attacks in Ukraine"
     },
     {
       "titulo": "Há Poucos Dias da Realização da Prova de Fórmula 1 no País, o Bahrein Acusa Teerã de Ataques Contra as Bases Americanas",
@@ -396,22 +412,6 @@
       "tag": "Brent",
       "data": "24/11/2026",
       "titulo_en": "With Just a Few Days to Go Until the Formula 1 Race in the Country, Bahrain Accuses Tehran of Attacks on US Bases"
-    },
-    {
-      "titulo": "Petrobras crava no plano a aposta em diesel, gasolina e etanol",
-      "fonte": "Eixos",
-      "url": "https://eixos.com.br/newsletters/comece-seu-dia/petrobras-crava-no-plano-a-aposta-em-diesel-gasolina-e-etanol/",
-      "tag": "Etanol",
-      "data": "24/11/2026",
-      "titulo_en": "Petrobras sets its sights on diesel, gasoline and ethanol in its plan"
-    },
-    {
-      "titulo": "Petrobrás Anuncia Plano de Negócios de Us$ 122 Bilhões e Meta para Ampliar Produção de Petróleo e Diesel",
-      "fonte": "Petronotícias",
-      "url": "https://petronoticias.com.br/petrobras-anuncia-plano-de-negocios-de-us-122-bilhoes-e-meta-para-ampliar-producao-de-petroleo-e-diesel/",
-      "tag": "Brent",
-      "data": "23/11/2026",
-      "titulo_en": "Petrobras Announces $122 Billion Business Plan and Target to Increase Oil and Diesel Production"
     }
   ]
 }
