@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-26T11:55:04.525633",
+  "atualizado": "2026-11-27T11:51:05.484107",
   "semana": "23/11 – 29/11/2026",
   "nacional": {
     "paridade": 70.7,
@@ -9,9 +9,9 @@
     "municipios_pesquisados": 26
   },
   "brent": {
-    "valor": 91.3,
-    "variacao": -3.5,
-    "data": "26/11/2026",
+    "valor": 92.11,
+    "variacao": -2.64,
+    "data": "27/11/2026",
     "fonte": "Yahoo Finance (ICE Brent)"
   },
   "etanol_paulinia": {
@@ -73,8 +73,8 @@
       "valor": 91.98
     },
     {
-      "data": "26/11",
-      "valor": 91.3
+      "data": "27/11",
+      "valor": 92.11
     }
   ],
   "estados": [
@@ -236,16 +236,12 @@
     }
   ],
   "pln_diario": {
-    "data": "25/11/2026",
-    "valor_m3": 3083.5,
-    "valor_litro": 3.0835,
-    "anterior_litro": 3.0845,
-    "variacao_dia": -0.03,
+    "data": "26/11/2026",
+    "valor_m3": 3091.0,
+    "valor_litro": 3.091,
+    "anterior_litro": 3.0835,
+    "variacao_dia": 0.24,
     "historico": [
-      {
-        "data": "11/11/2026",
-        "valor_litro": 3.0155
-      },
       {
         "data": "12/11/2026",
         "valor_litro": 3.019
@@ -281,6 +277,10 @@
       {
         "data": "25/11/2026",
         "valor_litro": 3.0835
+      },
+      {
+        "data": "26/11/2026",
+        "valor_litro": 3.091
       }
     ],
     "fonte": "CEPEA/ESALQ/B3 — Indicador diário do etanol hidratado, posto Paulínia (SP)"
@@ -334,84 +334,84 @@
   },
   "noticias": [
     {
-      "titulo": "Governo vai prorrogar subvenção de R$ 2,12 do diesel por 30 dias, diz Moretti",
+      "titulo": "Governo prorroga subsídio de R$ 2,12 ao diesel por mais 30 dias",
       "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/governo-vai-prorrogar-subvencao-de-r-2-12-do-diesel-por-30-dias-diz-moretti",
+      "url": "https://www.novacana.com/noticias/governo-prorroga-subsidio-de-r-2-12-ao-diesel-por-mais-30-dias",
       "tag": "Etanol",
-      "data": "26/11/2026",
-      "titulo_en": "Government to extend R$2.12 diesel subsidy for 30 days, says Moretti"
+      "data": "27/11/2026",
+      "titulo_en": "Government extends R$2.12 diesel subsidy for another 30 days"
     },
     {
-      "titulo": "Governo vai prorrogar subvenção de R$ 2,12 do diesel por 30 dias, diz Moretti",
+      "titulo": "Governo prorroga subsídio de R$ 2,12 ao diesel por mais 30 dias",
       "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/governo-vai-prorrogar-subvencao-de-r-2-12-do-diesel-por-30-dias-diz-moretti",
+      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/governo-prorroga-subsidio-de-r-2-12-ao-diesel-por-mais-30-dias",
       "tag": "Biocombustíveis",
-      "data": "26/11/2026",
-      "titulo_en": "Government to extend R$2.12 diesel subsidy for 30 days, says Moretti"
+      "data": "27/11/2026",
+      "titulo_en": "Government extends R$2.12 diesel subsidy for another 30 days"
     },
     {
-      "titulo": "Universidade da Paraíba deposita pedidos de patentes de tecnologias para análise de etanol e de pellets",
+      "titulo": "MME reforça que não há risco de desabastecimento de etanol anidro durante a entressafra",
       "fonte": "JornalCana",
-      "url": "https://jornalcana.com.br/mercado/universidade-da-paraiba-deposita-pedidos-de-patentes-de-tecnologias-para-analise-de-etanol-e-de-pellets/",
+      "url": "https://jornalcana.com.br/mercado/mme-reforca-que-nao-ha-risco-de-desabastecimento-de-etanol-anidro-durante-a-entressafra/",
       "tag": "Etanol",
-      "data": "26/11/2026",
-      "titulo_en": "University of Paraíba files patent applications for ethanol and pellet analysis technologies"
+      "data": "27/11/2026",
+      "titulo_en": "MME emphasizes that there is no risk of a shortage of anhydrous ethanol during the off-season"
     },
     {
-      "titulo": "Protestos na Bolívia contra aumento do diesel deixam pelo menos 16 detidos",
+      "titulo": "Preços da indústria sobem 0,98% em outubro com pressão de alimentos e combustíveis",
+      "fonte": "Canal Rural",
+      "url": "https://www.canalrural.com.br/economia/precos-da-industria-sobem-098-em-outubro-com-pressao-de-alimentos-e-combustiveis/",
+      "tag": "Etanol",
+      "data": "27/11/2026",
+      "titulo_en": "Industry prices rise 0.98% in October due to pressure from food and fuel prices"
+    },
+    {
+      "titulo": "Ambientalistas pedem auditoria em subsídios a combustíveis fósseis no Brasil",
       "fonte": "NovaCana",
-      "url": "https://www.novacana.com/noticias/protestos-na-bolivia-contra-aumento-do-diesel-deixam-pelo-menos-16-detidos",
+      "url": "https://www.novacana.com/noticias/ambientalistas-pedem-auditoria-em-subsidios-a-combustiveis-fosseis-no-brasil",
       "tag": "Etanol",
-      "data": "26/11/2026",
-      "titulo_en": "Protests in Bolivia against diesel price hike leave at least 16 people detained"
+      "data": "27/11/2026",
+      "titulo_en": "Environmentalists call for an audit of fossil fuel subsidies in Brazil"
     },
     {
-      "titulo": "Protestos na Bolívia contra aumento do diesel deixam pelo menos 16 detidos",
+      "titulo": "Ambientalistas pedem auditoria em subsídios a combustíveis fósseis no Brasil",
       "fonte": "BiodieselBR",
-      "url": "https://www.biodieselbr.com/noticias/inter/out/protestos-na-bolivia-contra-aumento-do-diesel-deixam-pelo-menos-16-detidos",
+      "url": "https://www.biodieselbr.com/noticias/regulacao/politica/ambientalistas-pedem-auditoria-em-subsidios-a-combustiveis-fosseis-no-brasil",
       "tag": "Biocombustíveis",
-      "data": "26/11/2026",
-      "titulo_en": "Protests in Bolivia against diesel price hike leave at least 16 people detained"
+      "data": "27/11/2026",
+      "titulo_en": "Environmentalists call for an audit of fossil fuel subsidies in Brazil"
     },
     {
-      "titulo": "Ajuste fiscal abre espaço para renovar subvenção do diesel",
-      "fonte": "Eixos",
-      "url": "https://eixos.com.br/newsletters/comece-seu-dia/ajuste-fiscal-abre-espaco-para-renovar-subvencao-do-diesel/",
-      "tag": "Energia",
-      "data": "25/11/2026",
-      "titulo_en": "Fiscal adjustment opens the way for renewal of the diesel subsidy"
-    },
-    {
-      "titulo": "O BRASIL SERÁ A SEDE DA 8ª CONFERÊNCIA MUNDIAL DOS TRANSPORTES AÉREOS QUE CONCLUIU SEU ENCONTRO NO CANADÁ COM ALGUMAS OR",
-      "fonte": "Petronotícias",
-      "url": "https://petronoticias.com.br/o-brasil-sera-a-sede-da-8a-conferencia-mundial-dos-transportes-aereos-que-concluiu-seu-encontro-no-canada-com-algumas-orientacoes-para-o-setor/",
-      "tag": "Brent",
-      "data": "25/11/2026",
-      "titulo_en": "BRAZIL WILL HOST THE 8TH WORLD AIR TRANSPORT CONFERENCE, WHICH CONCLUDED ITS MEETING IN CANADA WITH SOME [text cut off]"
-    },
-    {
-      "titulo": "Com mix alcooleiro, moagem da safra de cana 2026-2027do Norte-Nordeste se aproxima de 40% do previsto",
+      "titulo": "No canavial de encosta do Nordeste, quem colhe a cana é a Bell",
       "fonte": "JornalCana",
-      "url": "https://jornalcana.com.br/mercado/com-mix-alcooleiro-moagem-da-safra-de-cana-2026-2027do-norte-nordeste-se-aproxima-de-40-do-previsto/",
+      "url": "https://jornalcana.com.br/mercado/no-canavial-de-encosta-do-nordeste-quem-colhe-a-cana-e-a-bell/",
       "tag": "Produção",
-      "data": "25/11/2026",
-      "titulo_en": "With an alcohol mix, the crushing of the 2026-2027 sugarcane harvest in the North and Northeast is approaching 40% of the forecast"
+      "data": "27/11/2026",
+      "titulo_en": "In the hillside sugarcane fields of the Northeast, Bell is the one who harvests the cane."
     },
     {
-      "titulo": "Petróleo fecha em alta com tensões entre Houthis e Arábia Saudita e ataques da Ucrânia",
+      "titulo": "BNDES libera R$ 2,7 bilhões para Latam aliviar impacto da alta do combustível",
       "fonte": "Eixos",
-      "url": "https://eixos.com.br/petroleo-e-gas/petroleo-fecha-em-alta-com-tensoes-entre-houthis-e-arabia-saudita-e-ataques-da-ucrania/",
-      "tag": "Brent",
-      "data": "25/11/2026",
-      "titulo_en": "Oil closes higher amid tensions between the Houthis and Saudi Arabia and attacks in Ukraine"
+      "url": "https://eixos.com.br/combustiveis-e-bioenergia/bndes-libera-r-27-bilhoes-para-latam-aliviar-impacto-da-alta-do-combustivel/",
+      "tag": "Energia",
+      "data": "26/11/2026",
+      "titulo_en": "BNDES releases R$ 2.7 billion to LATAM to mitigate the impact of rising fuel prices"
     },
     {
-      "titulo": "Há Poucos Dias da Realização da Prova de Fórmula 1 no País, o Bahrein Acusa Teerã de Ataques Contra as Bases Americanas",
+      "titulo": "A Expansão das Vendas do Etanol de Milho Abre Uma Nova Frente Logística para Rumo Transportar o Produto do Mato Grosso a",
       "fonte": "Petronotícias",
-      "url": "https://petronoticias.com.br/ha-poucos-dias-da-realizacao-da-prova-de-formula-1-no-pais-o-bahrain-acusa-teera-de-ataques-contra-as-bases-americanas/",
+      "url": "https://petronoticias.com.br/a-expansao-das-vendas-do-etanol-de-milho-abre-uma-nova-frente-logistica-para-rumo-transportar-o-produto-do-mato-grosso-ao-porto-de-santos/",
+      "tag": "Etanol",
+      "data": "26/11/2026",
+      "titulo_en": "The Expansion of Corn Ethanol Sales Opens a New Logistics Front for Rumo to Transport the Product from Mato Grosso to"
+    },
+    {
+      "titulo": "Petróleo fecha em alta em meio a temor com oferta diante de escalada de tensão no Oriente Médio",
+      "fonte": "Eixos",
+      "url": "https://eixos.com.br/petroleo-e-gas/petroleo-fecha-em-alta-em-meio-a-temor-com-oferta-diante-de-escalada-de-tensao-no-oriente-medio/",
       "tag": "Brent",
-      "data": "24/11/2026",
-      "titulo_en": "With Just a Few Days to Go Until the Formula 1 Race in the Country, Bahrain Accuses Tehran of Attacks on US Bases"
+      "data": "26/11/2026",
+      "titulo_en": "Oil closes higher amid supply concerns due to escalating tensions in the Middle East"
     }
   ]
 }
